@@ -1,0 +1,14 @@
+/* スタイルをまとめて書く
+
+担当者全員が編集(コンフリクト解決も担当者)
+
+画面部品に汎用的なものを書いていくと短くまとまって良い
+*/
+
+.centered_button{
+    text-align: center;
+    border-radius: 10px;
+    padding: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
