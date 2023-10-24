@@ -1,5 +1,7 @@
 <?php require 'modules/header.php'; ?>
 
+    <h1>アパッチテスト</h1>
+
     <h1>新規登録</h1>
 
     <p>ユーザーネーム</p>
