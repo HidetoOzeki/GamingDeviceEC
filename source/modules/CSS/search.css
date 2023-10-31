@@ -1,0 +1,38 @@
+.serch_form{
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    border-radius: 3px;
+    width: 97%;
+  }
+  
+  .search_block{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(236, 236, 237);
+  }
+  
+  .serch_form input{
+    padding-left: 11.5%;
+    width: 100%;
+    font-size: 18px;
+    margin-left: 3%;
+    background-color: #f4f8fa;
+    border: none;  
+  }
+  
+  .search_btn{
+    padding: 6px 10px;
+    font-size: 9px;
+    position: absolute;
+    border: none;
+    background: none;
+    cursor: pointer;
+    background-color: #f4f8fa;
+    padding-right: 3%;
+    margin-left: 3%;
+  }
+  
+  .indent{
+    padding-top: 13%;
+  }
