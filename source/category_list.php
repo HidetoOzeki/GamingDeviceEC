@@ -5,21 +5,21 @@
         仕事用　　　　　　個人用
         <form>
             <label><input type="radio" name="purpose" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label>
-            <label><input type="radio" name="purpose" class="none"><img src="./img/ゲームコントローラのアイコン.png" class="personal"></label>
+            <label><input type="radio" name="purpose" class="none"><i class="fas fa-gamepad fa-6x"></i></label>
             <p>デバイスブランド</p>
-            <label><input type="radio" name="bland" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label>
-            <label><input type="radio" name="bland" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label>
-            <label><input type="radio" name="bland" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label><br>
-            <label><input type="radio" name="bland" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label>
-            <label><input type="radio" name="bland" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label>
-            <label><input type="radio" name="bland" class="none"><img src="" class="bland"></label>
+            <label><input type="radio" name="bland" class="none"></label>
+            <label><input type="radio" name="bland" class="none"></label>
+            <label><input type="radio" name="bland" class="none"></label><br>
+            <label><input type="radio" name="bland" class="none"></label>
+            <label><input type="radio" name="bland" class="none"></label>
+            <label><input type="radio" name="bland" class="none"></label>
             <p>カテゴリから選ぶ</p>
-            <label><input type="radio" name="category" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label>
-            <label><input type="radio" name="category" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label>
-            <label><input type="radio" name="category" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label><br>
-            <label><input type="radio" name="category" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label>
-            <label><input type="radio" name="category" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label>
-            <label><input type="radio" name="category" class="none"><img src="" class="category"></label>
+            <label><input type="radio" name="category" class="none"><i class="fas fa-mobile-alt fa-6x"></i></label>
+            <label><input type="radio" name="category" class="none"><i class="fas fa-mouse fa-3"></i></label>
+            <label><input type="radio" name="category" class="none"><i class="fas fa-tv"></i></label><br>
+            <label><input type="radio" name="category" class="none"><i class="fas fa-microphone-alt fa-3"></i></label>
+            <label><input type="radio" name="category" class="none"><i class="fas fa-keyboard fa-3"></i></label>
+            <label><input type="radio" name="category" class="none"></label>
             <p>価格</p>
             <label><input type="radio" name="price">0-1500円</label>　　　　<label><input type="radio" name="price">100000円以上</label><br>
             <label><input type="radio" name="price">1500-10000円</label><br>
