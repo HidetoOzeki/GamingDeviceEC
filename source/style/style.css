@@ -20,12 +20,83 @@
     margin-left: 5%;
     margin-top: 5%;
 }
+
 .none{
     display: none;
 }
-.none:checked{
+
+.fa-chalkboard-teacher{
+    border: solid;
+    padding: 4.5% 3% 2.5% 3%;
+    width: 35%;
+    height: 120px;
+    font-size: 85px;
+    margin: 2%;
+}
+.fa-chalkboard-teacher:active{
     
 }
+.fa-gamepad{
+    border: solid;
+    padding: 4.5% 3% 2.5% 3%;
+    width: 35%;
+    height: 120px;
+    font-size: 85px;
+    margin: 2%;
+}
+.fa-gamepad:active{
+    
+}
+.fa-mobile-alt{
+    border: solid;
+    padding: 3% 3% 2.5% 7%;
+    width: 26%;
+    font-size: 70px;
+    margin: 2.5% 2.5% 4.5% 6%;
+}
+.fa-mobile-alt:active{
+    
+}
+.fa-mouse{
+    border: solid;
+    padding: 3% 3% 2.5% 5.7%;
+    width: 26%;
+    font-size: 70px;
+}
+.fa-mouse:active{
+    
+}
+.fa-tv{
+    border: solid;
+    padding: 3% 3% 2.5% 1.5%;
+    width: 26%;
+    font-size: 70px;
+    margin: 2.5% 2.5% 4.5% 2.5%;
+}
+.fa-tv:active{
+    
+}
+.fa-microphone-alt{
+    border: solid;
+    padding: 3% 3% 2.5% 6.5%;
+    width: 26%;
+    font-size: 70px;
+    margin: 2.5% 2.5% 4.5% 6%;
+}
+.fa-microphone-alt:active{
+    
+}
+.fa-keyboard{
+    border: solid;
+    padding: 3% 3% 2.5% 2.5%;
+    width: 26%;
+    font-size: 70px;
+}
+.fa-keyboard:active{
+    background-color: rgb(201, 201, 201);
+    border-width: 3.8px;
+}
+
 .centered_button{
     margin-left: 25%;
     margin-top: 5%;
