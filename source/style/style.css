@@ -5,8 +5,18 @@
 画面部品に汎用的なものを書いていくと短くまとまって良い
 */
 
-.centered_button{
+.page_title { /*ページタイトル見出し(新規登録、マイページなど)*/
+    font-size: xx-large;
     text-align: center;
+    margin: 32px;
+}
+
+.centered_input_wide { /*中心テキストインプット*/
+    margin: auto;
+    width: 80%;
+}
+
+.centered_button{ /*中心ボタン*/
     border-radius: 10px;
     padding: 10%;
     margin-top: 5%;
