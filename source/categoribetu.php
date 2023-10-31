@@ -1,4 +1,5 @@
 <?php require 'modules/header.php'; ?>
+<?php require 'modules/serach.php'; ?>
 <img src="image.png" alt="イメージ" title="">
 <img src="image.png" alt="イメージ" title="">
 <br>
