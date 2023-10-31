@@ -27,5 +27,4 @@
     </div>
     <script src="scripts/signup.js" type="text/javascript"></script>
 
-<?php require 'modules/navigation.php'; ?>
 <?php require 'modules/footer.php'; ?>
