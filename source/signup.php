@@ -1,6 +1,8 @@
 <?php require 'modules/header.php'; ?>
 
     <h1 class="page_title">新規登録</h1>
+
+    <div id="app">
     
 
     <div class="centered_input_wide">
@@ -11,7 +13,7 @@
     <input placeholder="メールアドレス" type="text">
 
     <p>パスワード</p>
-    <input placeholder="パスワード" type="password">
+    <input v-model="password" placeholder="パスワード" type="password">
     </div>
 
     <br>
@@ -19,5 +21,10 @@
     <br>
     <button class="centered_button">スキップ</button>
 
-<?php require 'modules/navigation.php'; ?>
+    
+    <p v-if="!isValidPassword" class="has-text-danger">パスワードが十分な長さではありません</p>
+    
+    </div>
+    <script src="scripts/signup.js" type="text/javascript"></script>
+
 <?php require 'modules/footer.php'; ?>

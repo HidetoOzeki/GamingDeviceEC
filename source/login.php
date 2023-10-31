@@ -12,5 +12,4 @@
     <a href="signup.php" class="sinki_rinku">←新規登録</a><br>
     <input class="centered_button" type="submit" value="マイページへ">
 
-<?php require 'modules/navigation.php'; ?>
 <?php require 'modules/footer.php'; ?>
