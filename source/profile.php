@@ -2,7 +2,13 @@
  <h1 class="page_title">プロフィール編集</h1>
  <div class="centered_input_wide">
  <i class="fas fa-user-circle fa-5x level-item"></i>
- <p><button class="" name="button">保存</button></p>
+ <style>
+   .b{
+      float: right;
+   }
+ </style>
+ <p><button class="b" name="button" >保存</button></p>
+ 
  <p>ユーザーネーム</p>
     <input placeholder="ユーザーネーム" type="text">
  <p>パスワード</p>
