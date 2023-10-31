@@ -11,16 +11,20 @@
     margin: 32px;
 }
 
-.centered_input_wide { /*中心テキストインプット*/
-    margin: auto;
-    width: 80%;
+.centered_input_wide input{ /*中心テキストインプット*/
+    margin-left: 5%;
+    width: 90%;
+    margin-bottom: 5%;
+}
+.centered_input_wide p{
+    margin-left: 5%;
+    margin-top: 5%;
 }
 
-.centered_button{ /*中心ボタン*/
-    border-radius: 10px;
-    padding: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.centered_button{
+    margin-left: 25%;
+    width: 50%;
+    
 }
 
 body {

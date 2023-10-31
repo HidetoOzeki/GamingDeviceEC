@@ -1,15 +1,18 @@
 <?php require 'modules/header.php'; ?>
 
     <h1 class="page_title">新規登録</h1>
+    
 
+    <div class="centered_input_wide">
     <p>ユーザーネーム</p>
-    <input class="centered_input_wide" placeholder="ユーザーネーム" type="text">
+    <input placeholder="ユーザーネーム" type="text">
 
     <p>メールアドレス</p>
-    <input class="centered_input_wide" placeholder="メールアドレス" type="text">
+    <input placeholder="メールアドレス" type="text">
 
     <p>パスワード</p>
-    <input class="centered_input_wide" placeholder="パスワード" type="password">
+    <input placeholder="パスワード" type="password">
+    </div>
 
     <br>
     <button class="centered_button">登録</button>
