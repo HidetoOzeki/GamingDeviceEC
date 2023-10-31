@@ -23,9 +23,6 @@
 .none{
     display: none;
 }
-.none i {
-    border: solid;
-}
 .none:checked{
     
 }

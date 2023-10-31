@@ -4,8 +4,8 @@
     <div class="category_div">
         仕事用　　　　　　個人用
         <form>
-            <label><input type="radio" name="purpose" class="none"><i class="fas fa-chalkboard-teacher fa-6x"></i></label>
-            <label><input type="radio" name="purpose" class="none"><i class="fas fa-gamepad fa-6x"></i></label>
+            <label><input type="radio" name="purpose" class="none"><i class="fas fa-chalkboard-teacher fa-6x fa-border"></i></label>
+            <label><input type="radio" name="purpose" class="none"><i class="fas fa-gamepad fa-6x fa-border"></i></label>
             <p>デバイスブランド</p>
             <label><input type="radio" name="bland" class="none"></label>
             <label><input type="radio" name="bland" class="none"></label>
@@ -14,11 +14,11 @@
             <label><input type="radio" name="bland" class="none"></label>
             <label><input type="radio" name="bland" class="none"></label>
             <p>カテゴリから選ぶ</p>
-            <label><input type="radio" name="category" class="none"><i class="fas fa-mobile-alt fa-6x"></i></label>
-            <label><input type="radio" name="category" class="none"><i class="fas fa-mouse fa-3"></i></label>
-            <label><input type="radio" name="category" class="none"><i class="fas fa-tv"></i></label><br>
-            <label><input type="radio" name="category" class="none"><i class="fas fa-microphone-alt fa-3"></i></label>
-            <label><input type="radio" name="category" class="none"><i class="fas fa-keyboard fa-3"></i></label>
+            <label><input type="radio" name="category" class="none"><i class="fas fa-mobile-alt fa-6x fa-border"></i></label>
+            <label><input type="radio" name="category" class="none"><i class="fas fa-mouse fa-3 fa-border"></i></label>
+            <label><input type="radio" name="category" class="none"><i class="fas fa-tv fa-border"></i></label><br>
+            <label><input type="radio" name="category" class="none"><i class="fas fa-microphone-alt fa-3 fa-border"></i></label>
+            <label><input type="radio" name="category" class="none"><i class="fas fa-keyboard fa-3 fa-border"></i></label>
             <label><input type="radio" name="category" class="none"></label>
             <p>価格</p>
             <label><input type="radio" name="price">0-1500円</label>　　　　<label><input type="radio" name="price">100000円以上</label><br>
