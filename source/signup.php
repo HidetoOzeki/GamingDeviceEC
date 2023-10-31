@@ -22,7 +22,7 @@
     <button class="centered_button">スキップ</button>
 
     
-    <p v-if="isValidPassword" class="has-text-danger">パスワードエラー</p>
+    <p v-if="!isValidPassword" class="has-text-danger">パスワードが十分な長さではありません</p>
     
     </div>
     <script src="scripts/signup.js" type="text/javascript"></script>
