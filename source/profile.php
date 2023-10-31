@@ -1,5 +1,5 @@
 <?php require 'modules/header.php'; ?>
- <p><h1>プロフィール編集</h1></p>
+ <h1 class="page_title">プロフィール編集</h1>
  <i class="fas fa-user-circle"></i>
  <p><button class="" name="button">保存</button></p>
  <p>ユーザーネーム</p>
