@@ -4,7 +4,7 @@
     <div class="category_div">
         仕事用　　　　　　個人用
         <form>
-            <label><input type="radio" name="purpose" class="none"><img src="./img/0044-simple-art-m.png" class="worker"></label>
+            <label><input type="radio" name="purpose" class="none"><i class="fas fa-chalkboard-teacher fa-6x"></i></label>
             <label><input type="radio" name="purpose" class="none"><i class="fas fa-gamepad fa-6x"></i></label>
             <p>デバイスブランド</p>
             <label><input type="radio" name="bland" class="none"></label>
@@ -26,12 +26,6 @@
             <label><input type="radio" name="price">10000-50000円</label><br>
             <label><input type="radio" name="price">50000-100000円</label>　　　　<button type="submit">検索</button><br>
         </form>
-    </div>
-    <div id="nav" class="nav">
-        <button class="home"><i class="fas fa-home fa-3x"></i></button>
-        <button class="cart"><i class="fas fa-shopping-cart fa-3x"></i></button>
-        <button class="user"><i class="fas fa-user fa-3x"></i></button>
-        <button class="user1"><i class="fas fa-user fa-3x"></i></button>
     </div>
     <?php require 'modules/navigation.php'; ?>
 <?php require 'modules/footer.php'; ?>

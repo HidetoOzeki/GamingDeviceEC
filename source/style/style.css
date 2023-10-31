@@ -20,7 +20,15 @@
     margin-left: 5%;
     margin-top: 5%;
 }
-
+.none{
+    display: none;
+}
+.none i {
+    border: solid;
+}
+.none:checked{
+    
+}
 .centered_button{
     margin-left: 30%;
     margin-top: 5%;
