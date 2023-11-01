@@ -4,7 +4,7 @@
     <div class="category_div">
         仕事用　　　　　　個人用
         <form>
-            <label><input type="radio" name="purpose" class="none"><span><i class="fas fa-chalkboard-teacher fa-5x"></i></span></label>
+            <label><input type="radio" name="purpose" class="none"><i class="fas fa-chalkboard-teacher fa-5x"></i></label>
             <label><input type="radio" name="purpose" class="none"><i class="fas fa-gamepad fa-5x"></i></label>
             <p>デバイスブランド</p>
             <label><input type="radio" name="bland" class="none"></label>
@@ -28,5 +28,5 @@
         </form>
     </div>
     <?php require 'modules/navigation.php'; ?>
-    <script src="./script/category_list.js"></script>
+    
 <?php require 'modules/footer.php'; ?>
