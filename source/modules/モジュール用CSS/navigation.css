@@ -8,7 +8,9 @@
     border: solid;
     border-radius: 8px;
   }
-  
+  .fa-user{
+    background-repeat: no-repeat;
+  }
   .nav button{
     border: none;
     background: none;

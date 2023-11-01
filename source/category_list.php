@@ -1,5 +1,5 @@
 <?php require 'modules/header.php'; ?>
-<?php require 'modules/serach.php'; ?>
+<?php require 'modules/serach_box.php'; ?>
     <h3>使用用途</h3><br>
     <div class="category_div">
         仕事用　　　　　　個人用

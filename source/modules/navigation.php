@@ -2,7 +2,7 @@
     <button class="home"><i class="fas fa-home fa-3x"></i></button>
     <button class="cart"><i class="fas fa-shopping-cart fa-3x"></i></button>
     <button class="user"><i class="fas fa-user fa-3x"></i></button>
-    <button class="tags"><i class="fa fa-tags fa-3x"></i></button>
+    <button class="user"><i class="fas fa-tags fa-3x"></i></button>
 </div>
 <script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
 <script src="./modules/モジュール用SCRIPT/script.js"></script>
