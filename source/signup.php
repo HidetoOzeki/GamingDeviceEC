@@ -22,7 +22,7 @@
     <button class="centered_button">スキップ</button>
 
     
-    <p v-if="!isValidPassword" class="has-text-danger">パスワードが十分な長さではありません</p>
+    <p v-if="!isValidPassword" class="has-text-danger">有効なメールアドレスではありません。半角英数字を含む〇文字以上で入力してください。</p>
     
     </div>
     <script src="scripts/signup.js" type="text/javascript"></script>
