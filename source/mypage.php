@@ -35,10 +35,6 @@
 </div>
     <p><input type="button" value="購入履歴" id="button"></p>
 <div class="button">
-    <button type="button"> <img src="img/ie.jpg" height ="90" width="80" /></button>
-    <button type="button"> <img src="img/kago2.jpg" height ="90" width="80" /></button>
-    <button type="button"> <img src="img/hito.jpg "height ="90" width="80" /></button>
-    <button type="button"> <img src="img/kategori.png "height ="90" width="80" /></button>
 </div>
 </body> 
 </body>
