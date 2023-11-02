@@ -7,7 +7,7 @@
       float: right;
    }
  </style>
- <p><button class="b" name="button" >保存</button></p>
+ <p><button class="b button is-link" name="button" >保存</button></p>
  
  <p>ユーザーネーム</p>
     <input placeholder="ユーザーネーム" type="text">
