@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="shohin">
-        <img src="./image/twitch.png" alt="">
+        <img src="./image/a.png" alt="">
     </div>
     <p>0.0   ☆☆☆   ￥~~~~~</p>
     <button type="submit">カートに追加</button>
@@ -19,7 +19,7 @@
     <p>ゲーミングモニター/27/~~
     </p>
     <div class="hikaku">
-        <img src="./image/youtube.png" alt="">
+        <img src="./image/b.png" alt="">
         
     </div>
 </body>
