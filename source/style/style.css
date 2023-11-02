@@ -20,12 +20,89 @@
     margin-left: 5%;
     margin-top: 5%;
 }
+
 .none{
     display: none;
 }
-.none:checked{
-    
+
+.fa-chalkboard-teacher{
+    border: solid;
+    padding: 4.5% 3% 2.5% 3%;
+    width: 35%;
+    height: 120px;
+    font-size: 85px;
+    margin: 2%;
 }
+.none:checked + .fa-chalkboard-teacher{
+    background-color: rgb(201, 201, 201);
+    border-width: 3.8px;
+}
+.fa-gamepad{
+    border: solid;
+    padding: 4.5% 3% 2.5% 3%;
+    width: 35%;
+    height: 120px;
+    font-size: 85px;
+    margin: 2%;
+}
+.none:checked + .fa-gamepad{
+    background-color: rgb(201, 201, 201);
+    border-width: 3.8px;
+}
+.fa-mobile-alt{
+    border: solid;
+    padding: 3% 3% 2.5% 7%;
+    width: 26%;
+    font-size: 70px;
+    margin: 2.5% 2.5% 4.5% 6%;
+}
+.none:checked + .fa-mobile-alt{
+    background-color: rgb(201, 201, 201);
+    border-width: 3.8px;
+}
+.fa-mouse{
+    border: solid;
+    padding: 3% 3% 2.5% 5.7%;
+    width: 26%;
+    font-size: 70px;
+}
+.none:checked + .fa-mouse{
+    background-color: rgb(201, 201, 201);
+    border-width: 3.8px;
+}
+.fa-tv{
+    border: solid;
+    padding: 3% 3% 2.5% 1.5%;
+    width: 26%;
+    font-size: 70px;
+    margin: 2.5% 2.5% 4.5% 2.5%;
+}
+.none:checked + .fa-tv{
+    background-color: rgb(201, 201, 201);
+    border-width: 3.8px;
+}
+.fa-microphone-alt{
+    border: solid;
+    padding: 3% 3% 2.5% 6.5%;
+    width: 26%;
+    font-size: 70px;
+    margin: 2.5% 2.5% 4.5% 6%;
+}
+.none:checked + .fa-microphone-alt{
+    background-color: rgb(201, 201, 201);
+    border-width: 3.8px;
+}
+.fa-keyboard{
+    border: solid;
+    padding: 3% 3% 2.5% 2.5%;
+    width: 26%;
+    font-size: 70px;
+}
+.none:checked + .fa-keyboard{
+    background-color: rgb(201, 201, 201);
+    border-width: 3.8px;
+}
+
 .centered_button{
     margin-left: 25%;
     margin-top: 5%;
