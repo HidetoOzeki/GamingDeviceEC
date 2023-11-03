@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href
+    <link rel="stylesheet" href="./modules/モジュール用CSS/navigation.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         h1{
@@ -20,14 +22,17 @@
         .button {
           text-align:center;
         }
-      </style>
+        .fa-user-circle{
+          
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
     <h1>マイページ</h1>
     <p>ooo@oooooo</p>
  <div class="human">
-    <img src="img/hito.jpg" height ="120" wight="120"/>
+      <i class="fas fa-user-circle fa-7x"></i>
 </div>
     <p>ユーザーネーム</p>
 <div class="link">
@@ -36,6 +41,6 @@
     <p><input type="button" value="購入履歴" id="button"></p>
 <div class="button">
 </div>
-</body> 
+<?php require 'modules/navigation.php'; ?> 
 </body>
 </html>

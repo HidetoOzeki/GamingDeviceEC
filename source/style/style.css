@@ -21,20 +21,79 @@
     margin-top: 5%;
 }
 
+.centered_button{
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 50%;
+    border: 0;
+    background-color: lightgray;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+
+
+.sinki_rinku{
+padding-left:  15px;
+}
+
+body {
+    background-color: white;
+}
+
+/*category_listのCSS*/
+
+/*ラジオボタン非表示*/
 .none{
     display: none;
 }
 
+/*カテゴリの画像調整及びイベント処理*/
 .category-image{
     width: 100px;
     height: 100px;
     border: solid;
 }
-
 .none:checked + .category-image{
-    opacity: 0.4;
-    background-color: lightblue;
+    filter: invert(30%) sepia(0%) saturate(11%) hue-rotate(143deg) brightness(101%) contrast(93%);
 }
+/*ここまで*/
+
+/*aタグのデザイン調整*/
+.categories{
+    color: black;
+	text-decoration: none;
+}
+
+/*スマホのアイコンの調整及びイベント処理*/
+.fa-mobile-alt{
+    border: solid;
+    padding: 3% 3% 2.5% 7%;
+    width: 26%;
+    font-size: 70px;
+    margin: 2.5% 2.5% 4.5% 6%;
+}
+.none:checked + .fa-mobile-alt{
+    background-color: rgb(201, 201, 201);
+    border-width: 3.8px;
+}
+/*ここまで*/
+
+/*マウスのアイコンの調整及びイベント処理*/
+.fa-mouse{
+    border: solid;
+    padding: 3% 3% 2.5% 5.7%;
+    width: 26%;
+    font-size: 70px;
+}
+.none:checked + .fa-mouse{
+    background-color: rgb(201, 201, 201);
+    border-width: 3.8px;
+}
+/*ここまで*/
+
+/*仕事用のアイコンの調整及びイベント処理*/
 .fa-chalkboard-teacher{
     border: solid;
     padding: 4.5% 3% 2.5% 3%;
@@ -47,6 +106,9 @@
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
+/*ここまで*/
+
+/*ゲームパッドアイコンの調整及びイベント処理*/
 .fa-gamepad{
     border: solid;
     padding: 4.5% 3% 2.5% 3%;
@@ -59,27 +121,9 @@
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
-.fa-mobile-alt{
-    border: solid;
-    padding: 3% 3% 2.5% 7%;
-    width: 26%;
-    font-size: 70px;
-    margin: 2.5% 2.5% 4.5% 6%;
-}
-.none:checked + .fa-mobile-alt{
-    background-color: rgb(201, 201, 201);
-    border-width: 3.8px;
-}
-.fa-mouse{
-    border: solid;
-    padding: 3% 3% 2.5% 5.7%;
-    width: 26%;
-    font-size: 70px;
-}
-.none:checked + .fa-mouse{
-    background-color: rgb(201, 201, 201);
-    border-width: 3.8px;
-}
+/*ここまで*/
+
+/*モニターアイコンの調整及びイベント処理*/
 .fa-tv{
     border: solid;
     padding: 3% 3% 2.5% 1.5%;
@@ -91,6 +135,9 @@
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
+/*ここまで*/
+
+/*マイクアイコンの調整及びイベント処理*/
 .fa-microphone-alt{
     border: solid;
     padding: 3% 3% 2.5% 6.5%;
@@ -102,6 +149,9 @@
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
+/*ここまで*/
+
+/*キーボードアイコンの調整及びイベント処理*/
 .fa-keyboard{
     border: solid;
     padding: 3% 3% 2.5% 2.5%;
@@ -112,26 +162,16 @@
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
-
-.centered_button{
-    margin-left: 25%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 50%;
-    border: 0;
+/*ここまで*/
+.purchase_product{
     background-color: lightgray;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    margin: 8%;
+    padding: 8%;
 }
-.categories{
-    color: black;
-	text-decoration: none;
-}
-
-.sinki_rinku{
-padding-left:  15px;
-}
-
-body {
-    background-color: white;
+.purchase_img{
+    background-color: lightgray;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 15%;
 }

@@ -1,7 +1,8 @@
 <?php require 'modules/header.php'; ?>
 
     <h1 class="page_title">ログイン</h1>
-<div class="centered_input_wide">
+    <form action="mypage.php" method="post">
+    <div class="centered_input_wide">
     <p>メールアドレス</p>
     <input placeholder="メールアドレス" type="text">
 
@@ -11,6 +12,8 @@
     <br>
     <a href="signup.php" class="sinki_rinku">←新規登録</a><br>
     <input class="centered_button" type="submit" value="マイページへ">
+    </form>
+
 
     <p v-if="!isValidPassword" class="has-text-danger">入力内容が間違っています。メールアドレス、またはパスワードが違います。</p>
 

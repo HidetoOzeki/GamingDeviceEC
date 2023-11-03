@@ -10,13 +10,11 @@
             <label v-for="(image,i) in images" :bland_key="i"><input type="radio" name="bland" class="none"><img :src="image" class="category-image"></label>
             
             <p>カテゴリから選ぶ</p>
-            <span><a v-for="(item,j) in category" :category_key="j" href="categoribetu.php" class="categories"><i :class="item"></i></a></span>
+            <span class="category_span"><a v-for="(item,j) in category" :category_key="j" href="categoribetu.php" class="categories"><i :class="item"></i></a></span>
             <a href="categoribetu.php"></a>
             <p>価格</p>
-            <label><input type="radio" name="price">0-1500円</label>　　　　<label><input type="radio" name="price">100000円以上</label><br>
-            <label><input type="radio" name="price">1500-10000円</label><br>
-            <label><input type="radio" name="price">10000-50000円</label><br>
-            <label><input type="radio" name="price">50000-100000円</label>　　　　<button type="submit">検索</button><br>
+            <label v-for="(price,s) in pricerange" :price_key="s"><input type="radio" name="price">{{price}}<br></label><label><input type="radio" name="price">100000円以上</label><br>
+            <button type="submit">検索</button><br>
         </form>
     </div>
     <script src="./scripts/category_list.js"></script>
