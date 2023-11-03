@@ -7,14 +7,10 @@
             <label><input type="radio" name="purpose" class="none"><i class="fas fa-chalkboard-teacher fa-5x"></i></label>
             <label><input type="radio" name="purpose" class="none"><i class="fas fa-gamepad fa-5x"></i></label>
             <p>デバイスブランド</p>
-            <label><input type="radio" name="bland" class="none"><img src=""></label>
-            <label><input type="radio" name="bland" class="none"><img src=""></label>
-            <label><input type="radio" name="bland" class="none"><img src=""></label><br>
-            <label><input type="radio" name="bland" class="none"><img src=""></label>
-            <label><input type="radio" name="bland" class="none"><img src=""></label>
-            <label><input type="radio" name="bland" class="none"><img src=""></label>
+            <label><input type="radio" name="bland" class="none"><span v-for="(image,i) in images" :key="i"><img :src="image"></span></label>
+            
             <p>カテゴリから選ぶ</p>
-            <label><input type="radio" name="category" class="none"><span v-for="item in category" :key="i"><i :class="item"></i></span></label>
+            <label><input type="radio" name="category" class="none"><span v-for="(item,i) in category" :key="i"><i :class="item"></i></span></label>
             <label><input type="radio" name="category" class="none"></label>
             <p>価格</p>
             <label><input type="radio" name="price">0-1500円</label>　　　　<label><input type="radio" name="price">100000円以上</label><br>
