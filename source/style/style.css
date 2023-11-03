@@ -25,6 +25,16 @@
     display: none;
 }
 
+.category-image{
+    width: 100px;
+    height: 100px;
+    border: solid;
+}
+
+.none:checked + .category-image{
+    opacity: 0.4;
+    background-color: lightblue;
+}
 .fa-chalkboard-teacher{
     border: solid;
     padding: 4.5% 3% 2.5% 3%;
@@ -112,6 +122,10 @@
     background-color: lightgray;
     padding-top: 16px;
     padding-bottom: 16px;
+}
+.categories{
+    color: black;
+	text-decoration: none;
 }
 
 .sinki_rinku{

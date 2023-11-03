@@ -27,23 +27,23 @@
     transition: all 0.4s;
   }
   .home:active{
-    transform: perspective(50px) translateZ(-10px);
+    transform: perspective(50px) translateZ(-20px);
   }
   .cart{
     transition: all 0.4s;
   }
   .cart:active{
-    transform: perspective(50px) translateZ(-10px);
+    transform: perspective(50px) translateZ(-20px);
   }
   .user{
     transition: all 0.4s;
   }
   .user:active{
-    transform: perspective(50px) translateZ(-10px);
+    transform: perspective(50px) translateZ(-20px);
   }
   .tags{
     transition: all 0.4s;
   }
   .tags:active{
-    transform: perspective(50px) translateZ(-10px);
+    transform: perspective(50px) translateZ(-20px);
   }
