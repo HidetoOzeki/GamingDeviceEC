@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="./modules/モジュール用CSS/navigation.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
@@ -32,7 +31,7 @@
     <h1>マイページ</h1>
     <p>ooo@oooooo</p>
  <div class="human">
-      <i class="fas fa-user-circle fa-7x"></i>
+      <i class="fas fa-user-circle fa-10x"></i>
 </div>
     <p>ユーザーネーム</p>
 <div class="link">

@@ -22,28 +22,10 @@
   .nav button:active{
     background-color: lightblue;
   }
+  .nav_btn{
+    transition: all 0.1s;
+  }
+  .nav_btn:active{
+    transform: perspective(40px) translateZ(-15px);
+  }
   
-  .home{
-    transition: all 0.4s;
-  }
-  .home:active{
-    transform: perspective(50px) translateZ(-20px);
-  }
-  .cart{
-    transition: all 0.4s;
-  }
-  .cart:active{
-    transform: perspective(50px) translateZ(-20px);
-  }
-  .user{
-    transition: all 0.4s;
-  }
-  .user:active{
-    transform: perspective(50px) translateZ(-20px);
-  }
-  .tags{
-    transition: all 0.4s;
-  }
-  .tags:active{
-    transform: perspective(50px) translateZ(-20px);
-  }

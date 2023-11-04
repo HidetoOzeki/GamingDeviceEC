@@ -55,7 +55,7 @@ body {
     height: 100px;
     border: solid;
 }
-.none:checked + .category-image{
+.none:checked + img{
     filter: invert(30%) sepia(0%) saturate(11%) hue-rotate(143deg) brightness(101%) contrast(93%);
 }
 /*ここまで*/
@@ -166,7 +166,7 @@ body {
 .purchase_product{
     background-color: lightgray;
     margin: 8%;
-    padding: 8%;
+    padding: 10% 8% 8% 8%;
 }
 .purchase_img{
     background-color: lightgray;
@@ -174,4 +174,31 @@ body {
     width: 100px;
     height: 100px;
     margin-right: 15%;
+}
+.app{
+    position: relative;
+    margin-left: 7%;
+}
+.decrease_btn{
+    position: absolute;
+    border-radius: 8px 0 0 8px;
+    left: 0%;
+    top: 1px;
+    height: 23.5px;
+}
+.count{
+    position: absolute;
+    width: 13%;
+    left: 18.5px;
+}
+.increase_btn{
+    position: absolute;
+    border-radius: 0 8px 8px 0;    
+    left: 17%;
+    top: 1px;
+    height: 23.5px;
+}
+. product_img{
+    width: 100px;
+    height: 100px;
 }

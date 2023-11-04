@@ -3,7 +3,7 @@
     <h3>使用用途</h3><br>
     <div class="category_div">
         仕事用　　　　　　個人用
-        <form id="app">
+        <form action="gamenitiran.php" id="app" method="get">
             <label><input type="radio" name="purpose" class="none"><i class="fas fa-chalkboard-teacher fa-5x"></i></label>
             <label><input type="radio" name="purpose" class="none"><i class="fas fa-gamepad fa-5x"></i></label>
             <p>デバイスブランド</p>

@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php require 'modules/header.php'; ?>
+<?php require 'modules/serach_box.php'; ?>
     <div class="syouhin">
-        <img src="img/syouhin.jpg" height ="120" wight="120"/>
-        <img src="img/syouhin1.jpg" height ="120" wight="120"/><br>
-        <img src="img/syouhin1.jpg" height ="120" wight="120"/>
-        <img src="img/syouhin1.jpg" height ="120" wight="120"/><br>
-        <img src="img/syouhin1.jpg" height ="120" wight="120"/>
-        <img src="img/syouhin1.jpg" height ="120" wight="120"/>
+        <?php for($i = 1;$i<=6;$i++): ?>
+            <?php if($i%2==0): ?>
+                <img src="img/syouhin1.jpg" class="product_img"/><br>
+            <?php else: ?>
+                <img src="img/monitor-img.png" class="product_img"/>
+            <?php endif; ?>
+        <?php endfor; ?>
     </div>    
-</body>
-</html>
+    <?php require 'modules/navigation.php'; ?>
+<?php require 'modules/footer.php'; ?>
