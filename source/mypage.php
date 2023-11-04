@@ -38,8 +38,7 @@
     <a href="https://zero-plus.io" >プロフィール編集</a>
 </div>
     <p><input type="button" value="購入履歴" id="button"></p>
-<div class="button">
-</div>
+    
 <?php require 'modules/navigation.php'; ?> 
 </body>
 </html>

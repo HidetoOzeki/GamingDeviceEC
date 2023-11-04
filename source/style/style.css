@@ -42,6 +42,13 @@ body {
     background-color: white;
 }
 
+
+
+
+
+
+
+
 /*category_listのCSS*/
 
 /*ラジオボタン非表示*/
@@ -108,6 +115,10 @@ body {
 }
 /*ここまで*/
 
+/*カテゴリ選択の画像の調整*/
+.category_label{
+    margin-left: 3%;
+}
 /*ゲームパッドアイコンの調整及びイベント処理*/
 .fa-gamepad{
     border: solid;
@@ -163,22 +174,27 @@ body {
     border-width: 3.8px;
 }
 /*ここまで*/
+/*kaimonokagoのCSS*/
+
+/*購入商品のDIVタグ設定*/
 .purchase_product{
     background-color: lightgray;
-    margin: 8%;
+    /*margin: 8%;*/
     padding: 10% 8% 8% 8%;
 }
+/*購入商品の画像調整*/
 .purchase_img{
-    background-color: lightgray;
     float: left;
     width: 100px;
     height: 100px;
-    margin-right: 15%;
+    /*margin-right: 15%;*/
 }
+/*削除ボタンの設定*/
 .app{
     position: relative;
     margin-left: 7%;
 }
+/*ステッパーのボタン設定*/
 .decrease_btn{
     position: absolute;
     border-radius: 8px 0 0 8px;
@@ -198,7 +214,54 @@ body {
     top: 1px;
     height: 23.5px;
 }
-. product_img{
+/*ここまで*/
+
+
+
+/*gamenitiranとcategoribetuのCSS*/
+
+/*商品の画像の調整及びイベント処理*/
+.product_btn{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+}
+.product_btn:active .product_img{
+    background-color: lightblue;
+    border-width: 4px;
+}
+.product_img{
+    width: 130px;
+    height: 130px;
+    border: solid;
+    /*margin: 2% 0% 2% 5%;*/
+}
+/*ここまで*/
+
+/*formタグ同士を横並びにする*/
+.product_form{
+    display: inline-block;
+}
+/*ここまで*/
+
+
+
+
+/*shohin_detailのCSS*/
+
+/*shohin_detailの画像デザイン*/
+.product_detail_img{
+    border: solid 3px;
+}
+.compare_product_img{
     width: 100px;
     height: 100px;
+    /*margin-left: 23%;*/
+}
+/*ここまで*/
+
+/*shohin_detailの画像の横に文字が並ぶようにする*/
+.hikaku{
+    float: left;
 }
