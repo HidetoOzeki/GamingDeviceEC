@@ -6,7 +6,7 @@
                 <form action="shohin-detail.php" method="get" class="product_form">
                     <div class="container-heart">
                         <button type="submit" class="product_btn"><img src="img/monitor-img.png" class="product_img"/></button>
-                        <span><i class="far fa-heart heart_red fa-lg"></i></span>
+                        <button type="button" class="heart_btn"><i class="far fa-heart heart_red fa-lg"></i></button>
                     </div>
                 </form>
                 <br>
@@ -14,7 +14,7 @@
                 <form action="shohin-detail.php" method="get" class="product_form">
                     <div id="app" class="container-heart">
                         <button type="submit" class="product_btn"><img src="img/monitor-img.png" class="product_img"/></button>
-                        <span><i class="far fa-heart heart_red fa-lg"></i></span>
+                        <button type="button" class="heart_btn" @click="btn_counter"><i class="far fa-heart heart_red fa-lg"></i></button>
                     </div>
                 </form>
             <?php endif; ?>

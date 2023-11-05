@@ -275,16 +275,14 @@ body {
     height: 126px;
     position: relative;
 }
-.heart_red{
-    position: absolute;
-    bottom: 8%;
-    right: 5%;
-    z-index: 1000;
-    
-}
+
 .heart_btn{
     background: none;
     border: none;
+    position: absolute;
+    bottom: 6%;
+    right: 2%;
+    z-index: 1000;
 }
 .heart_red:active{
     animation: anime1 1s reverse;
