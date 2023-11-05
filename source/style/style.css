@@ -65,13 +65,16 @@ body {
 .none:checked + img{
     filter: invert(30%) sepia(0%) saturate(11%) hue-rotate(143deg) brightness(101%) contrast(93%);
 }
-/*ここまで*/
+
+
 
 /*aタグのデザイン調整*/
 .categories{
     color: black;
 	text-decoration: none;
 }
+
+
 
 /*スマホのアイコンの調整及びイベント処理*/
 .fa-mobile-alt{
@@ -85,7 +88,8 @@ body {
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
-/*ここまで*/
+
+
 
 /*マウスのアイコンの調整及びイベント処理*/
 .fa-mouse{
@@ -98,7 +102,8 @@ body {
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
-/*ここまで*/
+
+
 
 /*仕事用のアイコンの調整及びイベント処理*/
 .fa-chalkboard-teacher{
@@ -113,12 +118,14 @@ body {
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
-/*ここまで*/
+
+
 
 /*カテゴリ選択の画像の調整*/
 .category_label{
     margin-left: 3%;
 }
+
 /*ゲームパッドアイコンの調整及びイベント処理*/
 .fa-gamepad{
     border: solid;
@@ -132,7 +139,8 @@ body {
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
-/*ここまで*/
+
+
 
 /*モニターアイコンの調整及びイベント処理*/
 .fa-tv{
@@ -146,7 +154,8 @@ body {
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
-/*ここまで*/
+
+
 
 /*マイクアイコンの調整及びイベント処理*/
 .fa-microphone-alt{
@@ -160,7 +169,8 @@ body {
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
-/*ここまで*/
+
+
 
 /*キーボードアイコンの調整及びイベント処理*/
 .fa-keyboard{
@@ -173,7 +183,14 @@ body {
     background-color: rgb(201, 201, 201);
     border-width: 3.8px;
 }
-/*ここまで*/
+
+
+
+
+
+
+
+
 /*kaimonokagoのCSS*/
 
 /*購入商品のDIVタグ設定*/
@@ -192,7 +209,7 @@ body {
 /*削除ボタンの設定*/
 .app{
     position: relative;
-    margin-left: 7%;
+    /*margin-left: 7%;*/
 }
 /*ステッパーのボタン設定*/
 .decrease_btn{
@@ -214,7 +231,13 @@ body {
     top: 1px;
     height: 23.5px;
 }
-/*ここまで*/
+
+
+
+
+
+
+
 
 
 
@@ -222,28 +245,78 @@ body {
 
 /*商品の画像の調整及びイベント処理*/
 .product_btn{
-    width: 100%;
-    height: 100%;
-    border: none;
+    width: 142px;
+    height: 128px;
     background: none;
+    border: none;
 }
 .product_btn:active .product_img{
     background-color: lightblue;
     border-width: 4px;
 }
 .product_img{
-    width: 130px;
-    height: 130px;
+    position: relative;
+    width: 100%;
+    height: 100%;
     border: solid;
     /*margin: 2% 0% 2% 5%;*/
 }
-/*ここまで*/
 
 /*formタグ同士を横並びにする*/
 .product_form{
     display: inline-block;
+
 }
-/*ここまで*/
+
+/*ハートアイコンの調整とアニメーション*/
+.container-heart{
+    display: inline-block;
+    width: 133px;
+    height: 126px;
+    position: relative;
+}
+.heart_red{
+    position: absolute;
+    bottom: 8%;
+    right: 5%;
+    z-index: 1000;
+    
+}
+.heart_btn{
+    background: none;
+    border: none;
+}
+.heart_red:active{
+    animation: anime1 1s reverse;
+}
+
+@keyframes anime1{
+  0% { transform: scale(1.2);}
+  5% { transform: scale(1.22);}
+  10% { transform: scale(1.25);}
+  15% { transform: scale(1.27);}
+  20% { transform: scale(1.3);}
+  25% { transform: scale(1.32);}
+  30% { transform: scale(1.35);}
+  35% { transform: scale(1.37);}
+  40% { transform: scale(1.4);}
+  45% { transform: scale(1.42);}
+  50% {transform: scale(1.45);}
+  55% { transform: scale(1.42);}
+  60% {transform: scale(1.4);}
+  65% { transform: scale(1.37);}
+  70% { transform: scale(1.35);}
+  75% { transform: scale(1.32);}
+  80% { transform: scale(1.3);}
+  85% { transform: scale(1.27);}
+  90% { transform: scale(1.25);}
+  95% { transform: scale(1.22);}
+  100% { transform: scale(1.2); }
+}
+
+
+
+
 
 
 
@@ -259,7 +332,6 @@ body {
     height: 100px;
     /*margin-left: 23%;*/
 }
-/*ここまで*/
 
 /*shohin_detailの画像の横に文字が並ぶようにする*/
 .hikaku{
