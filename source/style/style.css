@@ -124,3 +124,11 @@ padding-left:  15px;
 body {
     background-color: white;
 }
+
+purchase_history {
+    background-color: purple;
+}
+
+purchase_history > item{
+    border: 2px solid black;
+}
