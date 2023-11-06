@@ -245,20 +245,22 @@ body {
 
 /*商品の画像の調整及びイベント処理*/
 .product_btn{
-    width: 142px;
-    height: 128px;
+    width: 134px;
+    height: 124px;
+    padding: 2% 3%;
     background: none;
     border: none;
+    
 }
 .product_btn:active .product_img{
     background-color: lightblue;
     border-width: 4px;
 }
 .product_img{
-    
     width: 100%;
     height: 100%;
     border: solid;
+    z-index: 500;
     /*margin: 2% 0% 2% 5%;*/
 }
 
@@ -276,28 +278,31 @@ purchase_history > item{
 /*formタグ同士を横並びにする*/
 .product_form{
     display: inline-block;
-
 }
 
 /*ハートアイコンの調整とアニメーション*/
 .container-heart{
     position: relative;
     display: inline-block;
-    width: 140px;
     height: 125px;
-    background-color: blue;
-}
-
-.heart_atag{
-    display: inline-block;
     
 }
-.fa-heart{
-    background-color: aqua;
+
+.temp{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    display: inline-block;
+    bottom: 0px;
+    right: 0px;
 }
+
+.VueStar {
+    bottom: 70px;
+    right: 75px;
+    width: 0%;
+    height: 0%;
+}
+
+
 /*.heart_red:active{
     animation: anime1 1s reverse;
 }
