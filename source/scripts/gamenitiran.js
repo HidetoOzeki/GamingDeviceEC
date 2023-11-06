@@ -1,13 +1,11 @@
-const app = new Vue({
-    el: "#app",
-    data(){
-        return{
-            count: 0
-        };
-    },
-    methods :{
-        btn_counter(){
-            this.count++;
-        }
+const VueStar = window['VueStar'];
+Vue.component('VueStar', VueStar);
+
+new Vue({
+  el: '#app',
+  methods: {
+    handleClick () {
+      //do something
     }
+  }
 });

@@ -6,7 +6,9 @@
                 <form action="shohin-detail.php" method="get" class="product_form">
                     <div class="container-heart">
                         <button type="submit" class="product_btn"><img src="img/monitor-img.png" class="product_img"/></button>
-                        <button type="button" class="heart_btn"><i class="far fa-heart heart_red fa-lg"></i></button>
+                        <vue-star animate="animated rubberBand" color="#5654F0">
+                            <a slot="icon" class="fa fa-heart fa-lg" @click="handleClick"></a>
+                        </vue-star>
                     </div>
                 </form>
                 <br>
@@ -14,12 +16,17 @@
                 <form action="shohin-detail.php" method="get" class="product_form">
                     <div id="app" class="container-heart">
                         <button type="submit" class="product_btn"><img src="img/monitor-img.png" class="product_img"/></button>
-                        <button type="button" class="heart_btn" @click="btn_counter"><i class="far fa-heart heart_red fa-lg"></i></button>
+                        <div class="heart_atag">
+                            <vue-star animate="animated rubberBand" color="#5654F0">
+                                <a slot="icon" class="fa fa-heart" @click="handleClick"></a>
+                            </vue-star>
+                        </div>
                     </div>
                 </form>
             <?php endif; ?>
         <?php endfor; ?>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue-star@0.0.4/dist/VueStar.js"></script>
     <script src="./scripts/gamenitiran.js"></script>
     <?php require 'modules/navigation.php'; ?>
 <?php require 'modules/footer.php'; ?>
