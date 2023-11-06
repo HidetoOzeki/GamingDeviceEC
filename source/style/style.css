@@ -262,6 +262,17 @@ body {
     /*margin: 2% 0% 2% 5%;*/
 }
 
+body {
+    background-color: white;
+}
+
+purchase_history {
+    background-color: purple;
+}
+
+purchase_history > item{
+    border: 2px solid black;
+}
 /*formタグ同士を横並びにする*/
 .product_form{
     display: inline-block;
