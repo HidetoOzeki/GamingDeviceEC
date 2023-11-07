@@ -9,7 +9,7 @@
 
 
     
-    <h1>商品比較</h1>
+    <h2>商品比較</h2>
     <p>ゲーミングモニター/27/~~</p>
     <div class="hikaku">
         <img src="./img/monitor-img.png" class="compare_product_img">
