@@ -1,6 +1,6 @@
 <?php require 'modules/header.php'; ?>
 
-    <h3>削除が完了しました</h3>
+    <h1 class="page_title_1">削除が完了しました</h1>
 
     <br>
     <button class="centered_button">一覧に戻る</button>

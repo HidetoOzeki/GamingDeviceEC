@@ -11,6 +11,12 @@
     margin: 32px;
 }
 
+.page_title_1 { 
+    font-size:25px;
+    text-align: center;
+    margin: 32px;
+    padding-top: 180px;
+}
 .centered_input_wide input{ /*中心テキストインプット*/
     margin-left: 5%;
     width: 90%;
@@ -42,7 +48,9 @@ body {
     background-color: white;
 }
 
-
+.gazou_center{
+    text-align: center;
+}
 
 
 
