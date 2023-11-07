@@ -15,6 +15,48 @@
         <img src="./img/monitor-img.png" class="compare_product_img">
     </div>
     
+    <div id="app">
+        <p>
+            <span>???：</span>
+            <input
+            v-model="range"
+            type="range"
+            max="500"
+            min="10"
+            />???
+        </p>
+        <p>
+            <span>???：</span>
+            <input
+            v-model="red"
+            type="range"
+            max="255"
+            min="0"
+            />???
+        </p>
+        <p>
+            <span>???：</span>
+            <input
+            v-model="green"
+            type="range"
+            max="255"
+            min="0"
+            />???
+        </p>
+        <p>
+            <span>???：</span>
+            <input
+            v-model="blue"
+            type="range"
+            max="255"
+            min="0"
+            />???
+        </p>
+        <div
+        :style="bindStyle"
+        ></div>
+    </div>
+    
     <?php require 'modules/navigation.php'; ?>
     
     <?php require 'modules/footer.php'; ?>
