@@ -1,7 +1,7 @@
 <?php require 'modules/header.php'; ?>
 <?php require 'modules/serach_box.php'; ?>
 <div class="syouhin" id="app">
-        <?php for($i = 1;$i<=6;$i++): ?>
+        <?php for($i = 1;$i<=10;$i++): ?>
             <?php if($i%2==0): ?>
                 <form action="shohin-detail.php" method="get" class="product_form">
                     <div class="container-heart">

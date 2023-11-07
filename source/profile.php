@@ -8,7 +8,7 @@
    }
  </style>
  <p><button class="b button is-link" name="button" >保存</button></p>
- 
+ <br>
  <p>ユーザーネーム</p>
     <input placeholder="ユーザーネーム" type="text">
  <p>パスワード</p>
