@@ -8,7 +8,10 @@
     border: solid;
     border-radius: 8px;
     z-index: 1000;
-  }
+}
+.nav_indent{
+  margin-bottom: 85px;
+}
   .nav button{
     border: none;
     background: none;
