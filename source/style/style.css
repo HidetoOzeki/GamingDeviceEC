@@ -267,14 +267,6 @@ body {
 body {
     background-color: white;
 }
-
-purchase_history {
-    background-color: purple;
-}
-
-purchase_history > item{
-    border: 2px solid black;
-}
 /*formタグ同士を横並びにする*/
 .product_form{
     display: inline-block;
@@ -300,6 +292,32 @@ purchase_history > item{
     right: 75px;
     width: 0%;
     height: 0%;
+}
+
+.purchase_history {
+
+}
+
+.purchased_item {
+    background-color: white;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100px;
+    position: relative;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.purchased_item_img {
+    margin: auto;
+    display: block;
+    width: 100px;
+    float: left;
+    background-color: white;
+    border: 1px solid black;
 }
 
 
