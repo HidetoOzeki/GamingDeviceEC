@@ -1,7 +1,8 @@
 <?php require 'modules/header.php'; ?>
 <?php require 'modules/serach_box.php'; ?>
     <div class="syouhin" id="app">
-        <?php for($i = 1;$i<=6;$i++): ?>
+        <div class="gazou_center">
+        <?php for($i = 1;$i<=10;$i++): ?>
             <?php if($i%2==0): ?>
                 <form action="shohin-detail.php" method="get" class="product_form">
                     <div class="container-heart">
@@ -27,6 +28,7 @@
                 </form>
             <?php endif; ?>
         <?php endfor; ?>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue-star@0.0.4/dist/VueStar.js"></script>
     <script src="./scripts/gamenitiran.js"></script>
