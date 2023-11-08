@@ -11,7 +11,6 @@
             <p>カテゴリから選ぶ</p>
             <span class="category_span"><a v-for="(item,j) in category" :category_key="j" href="categoribetu.php" class="categories"><i :class="item"></i></a></span>
             <p>価格</p>
-            <div class="category_price">
             <label v-for="(price,s) in pricerange" :price_key="s"><input type="radio" name="price">{{price}}<span v-if="s%2==1"><br></span></label>
             <button type="submit">検索</button><br>
         </form>
