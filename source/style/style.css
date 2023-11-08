@@ -319,17 +319,24 @@ purchase_history > item{
     margin-right: 10%;
     height: 100px;
     position: relative;
-    padding: 10px;
     border: 2px solid black;
 }
 
 .purchased_item_img {
-    margin: auto;
+    margin: 0px;
     display: block;
     width: 100px;
+    height: 99%;
+    object-fit: contain;
     float: left;
     background-color: white;
     border: 1px solid black;
+}
+
+.purchased_item button {
+    position:absolute;
+    right:5px;
+    bottom: 5px;
 }
 
 

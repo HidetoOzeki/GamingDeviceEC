@@ -8,6 +8,7 @@
     <div class="purchased_item">
     <img class="purchased_item_img" src="img/monitor-img.png" alt="">
     <div class="purchased_item_description">
+        <p>Quick Brown Fox Jumps over the lazy dog.</p>
         <button>レビューを書く</button>
     </div>
 
