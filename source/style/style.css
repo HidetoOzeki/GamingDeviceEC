@@ -219,6 +219,8 @@ body {
 /*削除ボタンの設定*/
 .app{
     position: relative;
+    bottom:30px;
+    left: 10px;
     /*margin-left: 7%;*/
 }
 /*ステッパーのボタン設定*/
@@ -240,6 +242,10 @@ body {
     left: 17%;
     top: 1px;
     height: 23.5px;
+}
+.button_de{
+    margin-left: 100px;
+    margin-top: 10px;
 }
 
 
