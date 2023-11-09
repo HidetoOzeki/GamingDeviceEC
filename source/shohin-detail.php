@@ -12,6 +12,7 @@
 </head>
 <body>
 <?php require 'modules/serach_box.php'; ?>
+<form action="kaimonokago.php">
     <div class="shohin">
         <img src="./img/monitor-img.png" class="product_detail_img">
     </div>
@@ -22,9 +23,14 @@
     <span>￥~~~~~</span>
     <div class="cart_btn" align="right"><button type="submit">カートに追加</button></div>
 
-
+    <style>
+   h1{
+        text-align:center;
+        font-size:  25px; 
+     }
+    </style>
     
-    <h2>商品比較</h2>
+    <h1>商品比較</h1>
     <p>ゲーミングモニター/27/~~</p>
     <div class="hikaku">
         <img src="./img/monitor-img.png" class="compare_product_img">
@@ -71,7 +77,7 @@
         :style="bindStyle"
         ></div>
     </div>
-    
+</form> 
     <?php require 'modules/navigation.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2/dist/vue.global.js"></script>
     <script src="https://unpkg.com/vue-star-rating@next/dist/VueStarRating.umd.min.js"></script>
