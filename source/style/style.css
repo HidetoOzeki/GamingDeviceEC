@@ -307,7 +307,7 @@ purchase_history > item{
 }
 
 .purchase_history {
-
+    
 }
 
 .purchased_item {
@@ -339,6 +339,11 @@ purchase_history > item{
     bottom: 5px;
 }
 
+.star_div{
+    display: inline-block;
+    padding-top: 5px;
+    margin-right: 150px;
+}
 
 /*.heart_red:active{
     animation: anime1 1s reverse;
