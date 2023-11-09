@@ -385,6 +385,26 @@ purchase_history > item{
     margin: 10%;
 }
 
+.wrap_admin_control_item {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px solid black;
+}
+
+.wrap_admin_control_item table{
+    width: 100%;
+}
+
+.wrap_admin_control_item td,th {
+    border: 2px solid black;
+    width: fit-content;
+}
+
+.control_item_desc {
+    width: 65%;
+}
 
 /*.heart_red:active{
     animation: anime1 1s reverse;
