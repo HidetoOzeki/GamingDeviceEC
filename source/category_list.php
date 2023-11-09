@@ -7,7 +7,7 @@
             <label><input type="radio" name="purpose" class="none"><i class="fas fa-chalkboard-teacher fa-5x"></i></label>
             <label><input type="radio" name="purpose" class="none"><i class="fas fa-gamepad fa-5x"></i></label>
             <p>デバイスブランド</p>
-            <label v-for="(image,i) in images" :bland_key="i" class="category_label"><input type="radio" name="bland" class="none"><img :src="image" class="category-image"></label>
+            <label v-for="(image,i) in images" :bland_key="i" class="bland_label"><input type="radio" name="bland" class="none"><img :src="image" class="bland-image"></label>
             <p>カテゴリから選ぶ</p>
             <span class="category_span"><a v-for="(item,j) in category" :category_key="j" href="categoribetu.php" class="categories"><i :class="item"></i></a></span>
             <p>価格</p>
