@@ -8,12 +8,15 @@
     border: solid;
     border-radius: 8px;
     z-index: 1000;
-  }
+}
+.nav_indent{
+  margin-bottom: 85px;
+}
   .nav button{
     border: none;
     background: none;
     cursor: pointer;  
-    padding: 3.5% 5.5%;
+    padding: 3% 6.5%;
     font-size: 12px;
   }
   
