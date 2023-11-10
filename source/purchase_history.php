@@ -9,7 +9,9 @@
     <img class="purchased_item_img" src="img/monitor-img.png" alt="">
     <div class="purchased_item_description">
         <p>Quick Brown Fox Jumps over the lazy dog.</p>
-        <button>レビューを書く</button>
+        <form action="post_review.php" method="post">
+        <button type="submit">レビューを書く</button>
+        </form>
     </div>
 
     </div>

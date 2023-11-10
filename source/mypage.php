@@ -1,14 +1,8 @@
 <!DOCTYPE html>
+<?php require 'modules/header.php'; ?>
 <html lang="ja">
 <head>
-    <link rel="stylesheet" href="./modules/モジュール用CSS/navigation.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        h1{
-            text-align:center;
-        }
         p{
           text-align:center;
         }
@@ -17,18 +11,27 @@
         }
         .link{
           text-align:center;
+    
+          margin-left:120px
         }
         .button {
           text-align:center;
+       margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100px;
+    border: 0;
+    background-color: lightgray;
+    padding-top: 16px;
+    padding-bottom: 40px;
         }
         .fa-user-circle{
-          
+        
         }
     </style>
-    <title>Document</title>
 </head>
 <body>
-    <h1>マイページ</h1>
+<form action="purchase_history.php">
+    <h1 class="page_title">マイページ</h1>
     <p>ooo@oooooo</p>
  <div class="human">
       <i class="fas fa-user-circle fa-10x"></i>
@@ -37,7 +40,8 @@
 <div class="link">
     <a href="profile.php">プロフィール編集</a>
 </div>
-    <p><input type="button" value="購入履歴" id="button"></p>
+    <p><input type="submit" value="購入履歴" class="button"></p>
+      </form>
     
 <?php require 'modules/navigation.php'; ?> 
 </body>
