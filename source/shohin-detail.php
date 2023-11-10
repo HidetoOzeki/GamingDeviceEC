@@ -38,7 +38,7 @@
             type="range"
             max="500"
             min="10"
-            />???
+            disabled/>???
         </p>
         <p>
             <span>???：</span>
@@ -47,7 +47,7 @@
             type="range"
             max="255"
             min="0"
-            />???
+            disabled/>???
         </p>
         <p>
             <span>???：</span>
@@ -56,7 +56,7 @@
             type="range"
             max="255"
             min="0"
-            />???
+            disabled/>???
         </p>
         <p>
             <span>???：</span>
@@ -65,7 +65,7 @@
             type="range"
             max="255"
             min="0"
-            />???
+            disabled/>???
         </p>
         <div
         :style="bindStyle"

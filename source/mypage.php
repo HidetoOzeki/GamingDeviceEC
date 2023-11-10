@@ -35,7 +35,7 @@
 </div>
     <p>ユーザーネーム</p>
 <div class="link">
-    <a href="https://zero-plus.io" >プロフィール編集</a>
+    <a href="profile.php">プロフィール編集</a>
 </div>
     <p><input type="button" value="購入履歴" id="button"></p>
     
