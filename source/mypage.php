@@ -30,6 +30,7 @@
     </style>
 </head>
 <body>
+<form action="purchase_history.php">
     <h1 class="page_title">マイページ</h1>
     <p>ooo@oooooo</p>
  <div class="human">
@@ -39,7 +40,8 @@
 <div class="link">
     <a href="profile.php" >プロフィール編集</a>
 </div>
-    <p><input type="button" value="購入履歴" class="button"></p>
+    <p><input type="submit" value="購入履歴" class="button"></p>
+      </form>
     
 <?php require 'modules/navigation.php'; ?> 
 </body>
