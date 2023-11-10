@@ -214,6 +214,8 @@ body {
     float: left;
     width: 100px;
     height: 100px;
+    margin-bottom: 15%;
+    background-color: red;
     /*margin-right: 15%;*/
 }
 /*削除ボタンの設定*/

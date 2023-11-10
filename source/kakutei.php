@@ -8,5 +8,5 @@
     <p>小計:￥</p>
     <input class="centered_button" type="submit" value="注文を確定">
 </div>
-    <?php require 'modules/navigation.php'; ?>
+<?php require 'modules/navigation.php'; ?>
 <?php require 'modules/footer.php'; ?>
