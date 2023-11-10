@@ -11,14 +11,21 @@
         }
         .link{
           text-align:center;
+    
+          margin-left:120px
         }
         .button {
           text-align:center;
-          width:300px;
-          height:300px;
+       margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100px;
+    border: 0;
+    background-color: lightgray;
+    padding-top: 16px;
+    padding-bottom: 40px;
         }
         .fa-user-circle{
-          
+        
         }
     </style>
 </head>
@@ -30,9 +37,9 @@
 </div>
     <p>ユーザーネーム</p>
 <div class="link">
-    <a href="https://zero-plus.io" >プロフィール編集</a>
+    <a href="profile.php" >プロフィール編集</a>
 </div>
-    <p><input type="button" value="購入履歴" id="button"></p>
+    <p><input type="button" value="購入履歴" class="button"></p>
     
 <?php require 'modules/navigation.php'; ?> 
 </body>
