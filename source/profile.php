@@ -2,7 +2,7 @@
  <h1 class="page_title">プロフィール編集</h1>
  <div class="centered_input_wide">
    <p class="level-item">ooo@oooooo</p>
- <i class="fas fa-user-circle fa-5x level-item"></i>
+ <i class="fas fa-user-circle fa-8x level-item"></i>
  <style>
    .b{
       float: right;
