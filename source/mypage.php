@@ -1,14 +1,8 @@
 <!DOCTYPE html>
+<?php require 'modules/header.php'; ?>
 <html lang="ja">
 <head>
-    <link rel="stylesheet" href="./modules/モジュール用CSS/navigation.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        h1{
-            text-align:center;
-        }
         p{
           text-align:center;
         }
@@ -20,15 +14,16 @@
         }
         .button {
           text-align:center;
+          width:300px;
+          height:300px;
         }
         .fa-user-circle{
           
         }
     </style>
-    <title>Document</title>
 </head>
 <body>
-    <h1>マイページ</h1>
+    <h1 class="page_title">マイページ</h1>
     <p>ooo@oooooo</p>
  <div class="human">
       <i class="fas fa-user-circle fa-10x"></i>
