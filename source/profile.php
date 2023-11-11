@@ -1,14 +1,16 @@
 <?php require 'modules/header.php'; ?>
  <h1 class="page_title">プロフィール編集</h1>
  <div class="centered_input_wide">
-   <p class="level-item">〇〇〇@〇〇〇〇〇〇</p>
- <i class="fas fa-user-circle fa-5x level-item"></i>
+   <p class="level-item">ooo@oooooo</p>
+ <i class="fas fa-user-circle fa-8x level-item"></i>
  <style>
    .b{
       float: right;
    }
  </style>
+<form action="mypage.php">
  <p><button class="b button is-link" name="button" >保存</button></p>
+</form>
  <br>
  <p>ユーザーネーム</p>
     <input placeholder="ユーザーネーム" type="text">
