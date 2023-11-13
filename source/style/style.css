@@ -215,12 +215,13 @@ body {
     width: 100px;
     height: 100px;
     margin-bottom: 15%;
-    background-color: red;
     /*margin-right: 15%;*/
 }
 /*削除ボタンの設定*/
-.app{
+.stepper-app{
     position: relative;
+    bottom: 17px;
+    left: 11px;
     /*margin-left: 7%;*/
 }
 /*ステッパーのボタン設定*/
@@ -262,7 +263,6 @@ body {
     padding: 2% 3%;
     background: none;
     border: none;
-    
 }
 .product_btn:active .product_img{
     background-color: rgb(201, 201, 201);
@@ -305,8 +305,9 @@ purchase_history > item{
     display: inline-block;
     bottom: 0px;
     right: 0px;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -350,7 +351,7 @@ purchase_history > item{
     bottom: 5px;
 }
 
-.rate {
+/*.rate {
     position: relative;
     display: inline-block;
     width: 90px;
@@ -380,6 +381,20 @@ purchase_history > item{
     display: flex;
     width: 330px;
     align-items: center;
+}*/
+
+.star_div{
+    position: relative;
+    margin-left: 39%;
+    display: inline-block;
+}
+
+.review{
+    position: absolute;
+    left: -65px;
+    top: 8px;
+    font-size: 1.5em;
+    margin-right: 50%;
 }
 
 .review_text {
@@ -437,7 +452,14 @@ purchase_history > item{
     /*margin-left: 23%;*/
 }
 
+.detail-prices{
+    position: relative;
+    bottom: 5px;
+    right: 0; 
+}
+
 /*shohin_detailの画像の横に文字が並ぶようにする*/
 .hikaku{
     float: left;
 }
+

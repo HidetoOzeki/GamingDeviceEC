@@ -9,8 +9,8 @@
             <p>商品の値段</p>
             <p>その他詳細</p>
             <form><button class="button_de" type="submit">削除</button></form>
-            <div id="app" class="app">
-                <button class="decrease_btn" @click="decrease">-</button><div class="count"><input type="number" v-model="count" :value="count"></div><button @click="increase" class="increase_btn">+</button>
+            <div id="app" class="stepper-app">
+                <button class="decrease_btn" @click="decrease">-</button><div class="count"><input type="number" :value="count" min="1"></div><button @click="increase" class="increase_btn">+</button>
             </div>
         </div>
     </div>

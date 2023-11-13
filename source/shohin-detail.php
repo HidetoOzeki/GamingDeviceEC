@@ -17,10 +17,10 @@
         <img src="./img/monitor-img.png" class="product_detail_img">
     </div>
     
-    <div id="app" class="star_div">
+    <div id="app" class="heart_div">
         <star-rating :increment="0.5" :rating="2.5" :max-rating="3" :read-only="true" :star-size="30"></star-rating>
     </div>
-    <span>￥~~~~~</span>
+    <span class="detail-prices">￥~~~~~</span>
     <div class="cart_btn" align="right"><button type="submit">カートに追加</button></div>
 
     <style>
