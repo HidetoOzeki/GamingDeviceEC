@@ -1,30 +1,25 @@
 <?php require 'modules/header.php'; ?>
+<?php
 
-    <h1 class="page_title">新規登録</h1>
+    echo '<h1 class="page_title">新規登録</h1>';
 
-    <div id="app">
+    echo '<div id="app">';
     
 
-    <div class="centered_input_wide">
-    <p>ユーザーネーム</p>
-    <input placeholder="ユーザーネーム" type="text">
+    echo '<div class="centered_input_wide">';
+    echo '<p>ユーザーネーム</p>';
+    echo '<input placeholder="ユーザーネーム" type="text">';
 
-    <p>メールアドレス</p>
-    <input placeholder="メールアドレス" type="text">
+    echo '<p>メールアドレス</p>';
+    echo '<input placeholder="メールアドレス" type="text">';
 
-    <p>パスワード</p>
-    <input v-model="password" placeholder="パスワード" type="password">
-    </div>
-
-    <br>
-    <button class="centered_button">登録</button>
-    <br>
-    <button class="centered_button">スキップ</button>
-
+    echo '<p>パスワード</p>';
+    echo '<input v-model="password" placeholder="パスワード" type="password"></div><br>';
+    echo '<button class="centered_button">登録</button><br>';
+    echo '<button class="centered_button">スキップ</button>';
     
-    <p v-if="!isValidPassword" class="has-text-danger">有効なメールアドレスではありません。半角英数字を含む〇文字以上で入力してください。</p>
-    
-    </div>
-    <script src="scripts/signup.js" type="text/javascript"></script>
+    echo '<p v-if="!isValidPassword" class="has-text-danger">有効なメールアドレスではありません。半角英数字を含む〇文字以上で入力してください。</p></div>';
+    echo '<script src="scripts/signup.js" type="text/javascript"></script>';
+    ?>
 
 <?php require 'modules/footer.php'; ?>
