@@ -1,15 +1,15 @@
 const app = Vue.createApp({ 
     // Your component code
-    data(){
-        return {
-            rating: 0
-        };
-    },
     methods: {
-        setRating: function(rating){
+        setRating(rating){
           this.rating= rating;
         }
-    }
+      },
+      data(){
+        return{
+            rating: 0
+        };
+      }
 })
 app.component('star-rating', VueStarRating.default)
 app.mount('#app')

@@ -8,3 +8,5 @@ PRIMARY KEY (user_id,product_id),
 FOREIGN KEY (user_id) REFERENCES user(user_id),
 FOREIGN KEY (product_id) REFERENCES product(product_id)
 );
+
+INSERT INTO review values(ユーザーID,商品ID,CURRENT_DATE(),評価値,"レビューの内容：********************");
