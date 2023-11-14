@@ -474,4 +474,6 @@ purchase_history > item{
 .hikaku{
     display: inline-block;
 }
-
+.param{
+    pointer-events: none;
+}

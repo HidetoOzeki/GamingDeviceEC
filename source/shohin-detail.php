@@ -45,7 +45,7 @@
             type="range"
             max="500"
             min="10"
-            />???
+            class="param"/>???
         </p>
         <p>
             <span style="font-size: 0.85em;">???：</span>
@@ -53,7 +53,7 @@
             type="range"
             max="255"
             min="0"
-            />???
+            class="param"/>???
         </p>
         <p>
             <span style="font-size: 0.85em;">???：</span>
@@ -61,7 +61,7 @@
             type="range"
             max="255"
             min="0"
-            />???
+            class="param"/>???
         </p>
         <p>
             <span style="font-size: 0.85em;">???：</span>
@@ -69,7 +69,7 @@
             type="range"
             max="255"
             min="0"
-            />???
+            class="param"/>???
         </p>
         <div
         :style="bindStyle"
