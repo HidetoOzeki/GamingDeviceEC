@@ -10,3 +10,6 @@ PRIMARY KEY (product_id),
 FOREIGN KEY (category_id) REFERENCES category(category_id),
 FOREIGN KEY (bland_id) REFERENCES bland(bland_id)
 );
+
+INSERT INTO product(category_id, bland_id, purpose_id, product_name, price, product_delete_flg) values("商品ID","カテゴリID","ブランドID","W","商品名",価格,"false");
+INSERT INTO product(category_id, bland_id, purpose_id, product_name, price, product_delete_flg) values("商品ID","カテゴリID","ブランドID","P","商品名",価格,"false");

@@ -37,6 +37,7 @@
     background-color: lightgray;
     padding-top: 16px;
     padding-bottom: 16px;
+    cursor: pointer;
 }
 
 
@@ -222,12 +223,13 @@ body {
     width: 100px;
     height: 100px;
     margin-bottom: 15%;
+    margin-right: 15%;
     /*margin-right: 15%;*/
 }
 /*削除ボタンの設定*/
 .stepper-app{
     position: relative;
-    bottom: 17px;
+    bottom: 30px;
     left: 11px;
     /*margin-left: 7%;*/
 }
@@ -252,7 +254,6 @@ body {
     height: 23.5px;
 }
 .button_de{
-    margin-left: 100px;
     margin-top: 10px;
 }
 
@@ -394,7 +395,7 @@ purchase_history > item{
     align-items: center;
 }*/
 
-.star_div{
+.review_star_div{
     position: relative;
     margin-left: 39%;
     display: inline-block;
@@ -460,17 +461,19 @@ purchase_history > item{
 .compare_product_img{
     width: 100px;
     height: 100px;
-    /*margin-left: 23%;*/
+    margin-left: 5%;
 }
 
 .detail-prices{
-    position: relative;
+    position: absolute;
     bottom: 5px;
-    right: 0; 
+    right: 25px; 
 }
 
 /*shohin_detailの画像の横に文字が並ぶようにする*/
 .hikaku{
-    float: left;
+    display: inline-block;
 }
-
+.param{
+    pointer-events: none;
+}

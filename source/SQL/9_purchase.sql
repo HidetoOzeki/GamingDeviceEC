@@ -5,3 +5,5 @@ purchase_date DATE NOT NULL,
 PRIMARY KEY (purchase_id),
 FOREIGN KEY (user_id) REFERENCES user(user_id)
 );
+
+INSERT INTO purchase values(購買番号,ユーザーID,CURRENT_DATE());

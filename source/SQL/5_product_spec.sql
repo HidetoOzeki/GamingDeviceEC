@@ -10,3 +10,5 @@ product_color VARCHAR(30) NOT NULL,
 PRIMARY KEY (specification_id),
 FOREIGN KEY (product_id) REFERENCES product(product_id)
 );
+
+INSERT INTO product_spec values("仕様ID",,"インターフェース","解像度","OS","サイズ","重さ","色");

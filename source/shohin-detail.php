@@ -17,11 +17,12 @@
         <img src="./img/monitor-img.png" class="product_detail_img">
     </div>
     
-    <div id="app" class="heart_div">
+    <div id="app" style="position: relative;">
         <star-rating :increment="0.5" :rating="2.5" :max-rating="3" :read-only="true" :star-size="30"></star-rating>
+        <span class="detail-prices">￥~~~~~</span>
     </div>
-    <span class="detail-prices">￥~~~~~</span>
-    <div class="cart_btn" align="right"><button type="submit">カートに追加</button></div>
+    
+    <div class="cart_btn" align="right" style="margin: 3%"><button type="submit">カートに追加</button></div>
 
     <style>
    h1{
@@ -31,47 +32,44 @@
     </style>
     
     <h1>商品比較</h1>
-    <p>ゲーミングモニター/27/~~</p>
+    <p style="width: 40%; font-size: 0.8em; margin-left: 8px;">ゲーミングモニター/27/~~</p>
     <div class="hikaku">
         <img src="./img/monitor-img.png" class="compare_product_img">
     </div>
     
-    <div id="app">
+    <div id="app" style="display: inline-block; margin-left: 5px;">
         <p>
-            <span>???：</span>
+            <span style="font-size: 0.85em;">???：</span>
             <input
             v-model="range"
             type="range"
             max="500"
             min="10"
-            disabled/>???
+            class="param"/>???
         </p>
         <p>
-            <span>???：</span>
+            <span style="font-size: 0.85em;">???：</span>
             <input
-            v-model="red"
             type="range"
             max="255"
             min="0"
-            disabled/>???
+            class="param"/>???
         </p>
         <p>
-            <span>???：</span>
+            <span style="font-size: 0.85em;">???：</span>
             <input
-            v-model="green"
             type="range"
             max="255"
             min="0"
-            disabled/>???
+            class="param"/>???
         </p>
         <p>
-            <span>???：</span>
+            <span style="font-size: 0.85em;">???：</span>
             <input
-            v-model="blue"
             type="range"
             max="255"
             min="0"
-            disabled/>???
+            class="param"/>???
         </p>
         <div
         :style="bindStyle"
