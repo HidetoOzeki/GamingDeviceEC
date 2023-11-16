@@ -17,7 +17,9 @@
     margin: 32px;
     padding-top: 180px;
 }
-
+.db{
+    color: rgb(74, 74, 74);
+}
 .centered_input_wide input{ /*中心テキストインプット*/
     margin-left: 5%;
     width: 90%;

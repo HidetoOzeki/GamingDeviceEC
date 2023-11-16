@@ -11,6 +11,7 @@
     <title>Document</title>
 </head>
 <body>
+    <?= count($_GET["compare_pd"])  ?>
 <?php require 'modules/serach_box.php'; ?>
 <form action="kaimonokago.php">
     <div class="shohin">
