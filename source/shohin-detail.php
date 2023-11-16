@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php require 'modules/serach_box.php'; ?>
-<form action="kaimonokago.php">
+<form action="kaimonokago.php" method="post">
     <div class="shohin">
         <img src="./img/monitor-img.png" class="product_detail_img">
     </div>
