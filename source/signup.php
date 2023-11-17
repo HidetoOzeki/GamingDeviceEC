@@ -21,34 +21,41 @@
     $mailaddress = $_POST['mailaddress'];
     $password = $_POST['password'];
 
-    $pdo = new PDO($connect,USER,PASS);
+    $pattern = "</^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/>";
 
-    //同じメールアドレスが登録されているかクエリを送る
-    $sql = $pdo->prepare('select * from user where mail_address=?');
-    $sql->execute([$mailaddress]);
+        if (preg_match($pattern, $mailaddress ) ) {
+        echo "正しい形式のメールアドレスです。";
+        $pdo = new PDO($connect,USER,PASS);
 
-    if(empty($sql->fetchAll())){ //クエリの結果が空だったら(同じメールアドレスは登録されていなかった
-        //ユーザー登録を行う
-        $sql=$pdo->prepare('insert into user values(null,?,?,?,?,null,?)');
-        $sql->execute(['U',$username,$mailaddress,$password,'false']); //フラグはDBのBit型でいいかも
-        //セッションを開始する
-        $sql=$pdo->prepare('select * from user where mail_address=?');
+        //同じメールアドレスが登録されているかクエリを送る
+        $sql = $pdo->prepare('select * from user where mail_address=?');
         $sql->execute([$mailaddress]);
-        foreach($sql as $row){
-            $_SESSION['user']=[
-                'user_id'=>$row['user_id'],
-                'role_id'=>$row['role_id'],
-                'user_name'=>$row['user_name'],
-                'mail_address'=>$row['mail_address'],
-                'user_password'=>$row['user_password'],
-                'user_address'=>$row['user_address']
-            ];
+    
+        if(empty($sql->fetchAll())){ //クエリの結果が空だったら(同じメールアドレスは登録されていなかった
+            //ユーザー登録を行う
+            $sql=$pdo->prepare('insert into user values(null,?,?,?,?,null,?)');
+            $sql->execute(['U',$username,$mailaddress,$password,'false']); //フラグはDBのBit型でいいかも
+            //セッションを開始する
+            $sql=$pdo->prepare('select * from user where mail_address=?');
+            $sql->execute([$mailaddress]);
+            foreach($sql as $row){
+                $_SESSION['user']=[
+                    'user_id'=>$row['user_id'],
+                    'role_id'=>$row['role_id'],
+                    'user_name'=>$row['user_name'],
+                    'mail_address'=>$row['mail_address'],
+                    'user_password'=>$row['user_password'],
+                    'user_address'=>$row['user_address']
+                ];
+            }
+            //マイページ画面に遷移する
+            redirect('mypage.php');
+        }else{
+            echo '<p>すでにメールアドレスが登録されています。ログインを行ってください</p>';
         }
-        //マイページ画面に遷移する
-        redirect('mypage.php');
-    }else{
-        echo '<p>すでにメールアドレスが登録されています。ログインを行ってください</p>';
-    }
+        } else {
+        echo "不正な形式のメールアドレスです。";
+        }
 
     }
 
@@ -70,7 +77,7 @@
 
     <br>
 
-    <button type="submit" class="centered_button">登録</button>
+    <button type="submit" class="centered_button">登録</button> 
 
     <br>
 
