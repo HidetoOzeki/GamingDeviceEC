@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php require 'modules/db.php'?>
 <?php require 'modules/header.php'; ?>
+<?php require 'modules/utilcommon.php'; ?>
 
 <h1 class="page_title">ダミー新規登録</h1>
 
@@ -39,7 +40,7 @@
                 'user_name'=>$row['user_name'],
                 'mail_address'=>$row['mail_address'],
                 'user_password'=>$row['user_password'],
-                'user_address'=>$row['user_adress']
+                'user_address'=>$row['user_address']
             ];
         }
         //マイページ画面に遷移する
