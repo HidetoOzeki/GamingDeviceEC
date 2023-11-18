@@ -13,11 +13,13 @@
 </form>
  <br>
  <p>ユーザーネーム</p>
-    <input placeholder="ユーザーネーム" type="text">
+    <input placeholder="ユーザーネーム" type="text" id="user_name">
  <p>パスワード</p>
-    <input placeholder="パスワード" type="password">
+    <input placeholder="パスワード" type="password" id="user_password">
  <p>住所</p>
-    <input placeholder="住所" type="address">
+    <input placeholder="住所" type="address" id="user_address">
 </div>
+<script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
+<script src="./scripts/user_profile_update.js"></script>
 <?php require 'modules/navigation.php'; ?>
 <?php require 'modules/footer.php'; ?>

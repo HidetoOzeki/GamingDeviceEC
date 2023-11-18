@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<?php session_start(); ?>
+<?php require 'modules/db.php'; ?>
 <?php require 'modules/header.php'; ?>
-<html lang="ja">
-<head>
     <style>
         p{
           text-align:center;
@@ -28,15 +27,19 @@
         
         }
     </style>
-</head>
-<body>
+    <?php 
+    $pdo = new PDO($connect,USER,PASS);
+    $sql = $pdo->prepare('select * from user where user_password=?');
+    $sql->execute([$_POST['password']]);
+    $result = $sql->fetchAll();
+    ?>
 <form action="purchase_history.php">
     <h1 class="page_title">マイページ</h1>
-    <p>ooo@oooooo</p>
+    <p><?= $result[0]["mail_address"] ?></p>
  <div class="human">
       <i class="fas fa-user-circle fa-10x"></i>
 </div>
-    <p>ユーザーネーム</p>
+    <p><?= $result[0]["user_name"] ?></p>
 <div class="link">
     <a href="profile.php">プロフィール編集</a>
 </div>
@@ -44,5 +47,4 @@
       </form>
     
 <?php require 'modules/navigation.php'; ?> 
-</body>
-</html>
+<?php require 'modules/footer.php'; ?>

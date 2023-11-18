@@ -11,13 +11,11 @@
     <title>Document</title>
 </head>
 <body>
-    <?= count($_GET["compare_pd"])  ?>
 <?php require 'modules/serach_box.php'; ?>
 <form action="kaimonokago.php">
     <div class="shohin">
         <img src="./img/monitor-img.png" class="product_detail_img">
     </div>
-    
     <div id="app" style="position: relative;">
         <star-rating :increment="0.5" :rating="2.5" :max-rating="3" :read-only="true" :star-size="30"></star-rating>
         <span class="detail-prices">￥~~~~~</span>

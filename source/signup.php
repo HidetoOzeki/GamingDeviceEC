@@ -29,9 +29,9 @@
     <!--output-->
 <?php 
     $pdo = new PDO($connect,USER,PASS);
-    $sql=$pdo->prepare('insert into user values(null,?,?,?,?,null,?)');
+    $sql=$pdo->prepare('INSERT INTO user(role_id,user_name,mail_address,user_password,user_delete_flg) values(?,?,?,?,"false")');
     $sql->execute([
-        'U',$_POST['user_name'],$_POST['mail_address'],$_POST['user_password'],0]);
+        'U',$_POST['user_name'],$_POST['mail_address'],$_POST['user_password']]);
 
     ?>
 <!--output-->

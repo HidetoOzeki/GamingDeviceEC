@@ -7,7 +7,7 @@
             <?php if($i%2==0): ?>
                 <form action="shohin-detail.php" method="get" class="product_form">
                     <div class="container-heart">
-                        <input type="hidden" name="detail_pd[]" value="<?= $i ?>" id="detail_pd">
+                        <input type="hidden" name="detail_pd" value="<?= $i ?>" id="detail_pd">
                         <button type="submit" class="product_btn"><img src="img/monitor-img.png" class="product_img"/></button>
                         <div class="temp">
                             <vue-star color="#F05654">
@@ -20,7 +20,7 @@
             <?php else: ?>
                 <form action="shohin-detail.php" method="get" class="product_form">
                     <div class="container-heart">
-                        <input type="hidden" name="detail_pd[]" value="<?= $i ?>" id="detail_pd">
+                        <input type="hidden" name="detail_pd" value="<?= $i ?>" id="detail_pd">
                         <button type="submit" class="product_btn"><img src="img/monitor-img.png" class="product_img"/></button>
                         <div class="temp">
                             <vue-star color="#F05654" id="vuestar">
@@ -37,5 +37,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue-star@0.0.4/dist/VueStar.js"></script>
     <script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
     <script src="./scripts/gamenitiran.js"></script>
+    <script src="./scripts/compare_func.js"></script>
     <?php require 'modules/navigation.php'; ?>
 <?php require 'modules/footer.php'; ?>

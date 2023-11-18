@@ -19,7 +19,6 @@
     $username = $_POST['username'];
     $mailaddress = $_POST['mailaddress'];
     $password = $_POST['password'];
-
     $pdo = new PDO($connect,USER,PASS);
 
     //同じメールアドレスが登録されているかクエリを送る

@@ -1,32 +1,25 @@
-<?php session_start(); ?>
 <?php require 'modules/header.php'; ?>
 
-<?php
-$_SESSION['customer']=[
-        'id'=>$row['id'], 'name'=>$row['name'],
-        'address'=>$row['address'], 'login'=>$row['login'],
-        'password'=>$row['password']];
-}
-?>
+
 <?php
     echo '<h1 class="page_title">ログイン</h1>';
-    echo '<form action="mypage.php" method="post">';
+    echo '<form action="mypage.php" method="post" id="check_form">';
     echo '<div class="centered_input_wide">';
     echo '<p>メールアドレス</p>';
-    echo '<input placeholder="メールアドレス" type="text">';
+    echo '<input placeholder="メールアドレス" type="text" id="mail_address">';
 
     echo '<p>パスワード</p>';
-    echo '<input placeholder="パスワード" type="password">';
+    echo '<input placeholder="パスワード" name="password" type="password" id="password">';
     echo '</div>';
     echo '<br>';
     echo '<a href="signup.php" class="sinki_rinku">←新規登録</a><br>';
-    echo '<input class="centered_button" type="submit" value="マイページへ">';
+    echo '<button class="centered_button" id="mypage_transition" type="button">マイページへ</button>';
     echo '</form>';
 
 
-    echo '<p v-if="!isValidPassword" class="has-text-danger">入力内容が間違っています。メールアドレス、またはパスワードが違います。</p>';
-
-    echo '<script src="scripts/signup.js" type="text/javascript"></script>';
+    echo '<p class="has-text-danger" id="check_input"></p>';
+    
 ?>
-
+<script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
+<script src="./scripts/login_select.js"></script>
 <?php require 'modules/footer.php'; ?>
