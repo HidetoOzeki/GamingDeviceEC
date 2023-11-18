@@ -7,6 +7,7 @@
 
 <div id="app">
 </div>
+<!--ozeki-->
     <?php
 
     if(isset($_SESSION['user'])){
@@ -51,6 +52,7 @@
     }
 
     ?>
+    <!--ozeki-->
 
     <div class="centered_input_wide">
 
