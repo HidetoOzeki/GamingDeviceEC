@@ -1,5 +1,5 @@
 $(function(){
-    $("#mypage_transition").on("click",function(e){
+    $("#mypage_transition").on("click",function(){
         $.ajax({
             type: "POST",
             url: "login_select.php",
@@ -11,8 +11,6 @@ $(function(){
             }else if(result.msg[0]=="success"){
                 $('form').submit();
             }
-        }).fail(function(data){
-            alert("a");
         });
     });
 });

@@ -1,12 +1,12 @@
 <?php session_start(); ?>
 <?php require 'modules/db.php'?>
 <?php require 'modules/header.php'; ?>
-<?php require 'modules/db.php'; ?>
+
 <?php
     echo '<form action="signup.php" method="post">';
     echo '<h1 class="page_title">新規登録</h1>';
 
-    echo '<div id="app">';
+    echo '<div id="app">';?>
 <h1 class="page_title">新規登録</h1>
 
 <div id="app">
@@ -18,9 +18,9 @@
         unset($_SESSION['user']);
         //もしも新規登録画面にログインした状態で来たら自動でログアウト
     }
-
-    if(!empty($_POST)){ //POST情報があるか(登録ボタンが押された後か)
     
+    if(!empty($_POST)){ //POST情報があるか(登録ボタンが押された後か)
+        var_dump($_POST['mailaddress']);
     $username = $_POST['username'];
     $mailaddress = $_POST['mailaddress'];
     $password = $_POST['password'];

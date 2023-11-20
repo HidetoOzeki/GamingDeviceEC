@@ -1,7 +1,8 @@
+<?php session_start(); ?>
 <?php require 'modules/header.php'; ?>
  <h1 class="page_title">プロフィール編集</h1>
  <div class="centered_input_wide">
-   <p class="level-item">ooo@oooooo</p>
+   <p class="level-item"><?= $_SESSION['user']['mail_address'] ?></p>
  <i class="fas fa-user-circle fa-10x level-item"></i>
  <style>
    .b{
@@ -9,7 +10,7 @@
    }
  </style>
 <form action="mypage.php">
- <p><button type="submit" class="b button is-link" name="button" >保存</button></p>
+ <p><button type="submit" class="b button is-link" id="register_btn">保存</button></p>
 </form>
  <br>
  <p>ユーザーネーム</p>

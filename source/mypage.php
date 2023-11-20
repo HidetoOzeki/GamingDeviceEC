@@ -27,22 +27,16 @@
         
         }
     </style>
-    <?php 
-    $pdo = new PDO($connect,USER,PASS);
-    $sql = $pdo->prepare('select * from user where user_password=?');
-    $sql->execute([$_POST['password']]);
-    $result = $sql->fetchAll();
-    ?>
 <form action="purchase_history.php">
     <h1 class="page_title">マイページ</h1>
-    <p><?= $result[0]["mail_address"] ?></p>
+    <p><?= $_SESSION['user']['mail_address'] ?></p>
  <div class="human">
       <i class="fas fa-user-circle fa-10x"></i>
 </div>
-    <p><?= $result[0]["user_name"] ?></p>
+    <p><?= $_SESSION['user']['user_name'] ?></p>
 <div class="link">
     <a href="profile.php">プロフィール編集</a>
-</div>
+</div>  
     <p><input type="submit" value="購入履歴" class="button"></p>
       </form>
     
