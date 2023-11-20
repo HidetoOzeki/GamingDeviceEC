@@ -17,10 +17,12 @@ $url= "https://zipcloud.ibsnet.co.jp/api/search?zipcode=";
    echo '<br>';
    echo '<p>ユーザーネーム</p>';
    echo '<input placeholder="ユーザーネーム" type="text"';
+   echo '<br>';
    echo '<p>パスワード</p>';
    echo '<input placeholder="パスワード" type="password"';
+   echo '<br>';
    echo '<p>住所</p>';
-   echo '<input placeholder="住所または郵便番号を入力してください" type="address"';
+   echo '<input placeholder="住所または郵便番号を入力してください" type="address" ';
    echo '</form>';
    echo '</div>';
 ?>
