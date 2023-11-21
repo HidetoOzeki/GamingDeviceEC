@@ -1,4 +1,3 @@
-<!-- @英斗 誰のデータベース使うん？ -->
 <?php
  const SERVER = '127.0.0.1';
  const DBNAME = 'gamingdeviceec';

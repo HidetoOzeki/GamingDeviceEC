@@ -9,5 +9,4 @@ user_delete_flg VARCHAR(5) NOT NULL,
 PRIMARY KEY (user_id)
 );
 
-INSERT INTO user(role_id,user_name,mail_address,user_password,user_address,user_delete_flg) values("M","名前","メールアドレス","パスワード","住所","false");
 INSERT INTO user(role_id,user_name,mail_address,user_password,user_delete_flg) values("M","名前","メールアドレス","パスワード","false");

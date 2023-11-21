@@ -11,4 +11,4 @@ PRIMARY KEY (specification_id),
 FOREIGN KEY (product_id) REFERENCES product(product_id)
 );
 
-INSERT INTO product_spec values("仕様ID",,"インターフェース","解像度","OS","サイズ","重さ","色");
+INSERT INTO product_spec values("仕様ID",商品ID,"インターフェース","解像度","OS","サイズ","重さ","色");
