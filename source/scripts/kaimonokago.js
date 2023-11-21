@@ -7,7 +7,9 @@ const app = new Vue({
     },
     methods: {
         decrease(){
-            this.count--;
+            if(this.count>1){
+                this.count--;
+            }
         },
         increase(){
             this.count++;
