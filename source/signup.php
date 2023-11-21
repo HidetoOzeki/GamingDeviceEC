@@ -12,6 +12,8 @@
 <!--ozeki-->
     <?php
 
+    $msg ='';
+
     if(isset($_SESSION['user'])){
         unset($_SESSION['user']);
         //もしも新規登録画面にログインした状態で来たら自動でログアウト
@@ -23,10 +25,9 @@
     $mailaddress = $_POST['mailaddress'];
     $password = $_POST['password'];
 
-    $pattern = "</^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/>";
+    $pattern = "|^[0-9a-z_./?-]+@([0-9a-z-]+\.)+[0-9a-z-]+$|";
 
-        if (true) {
-        echo "正しい形式のメールアドレスです。";
+        if (preg_match($pattern,$mailaddress)) {
         $pdo = new PDO($connect,USER,PASS);
 
         //同じメールアドレスが登録されているかクエリを送る
@@ -53,10 +54,10 @@
             //マイページ画面に遷移する
             redirect('mypage.php');
         }else{
-            echo '<p>すでにメールアドレスが登録されています。ログインを行ってください</p>';
+        $msg = 'すでにメールアドレスが登録されています。ログインを行ってください';
         }
         } else {
-        echo "不正な形式のメールアドレスです。";
+        $msg = "有効なメールアドレスではありません。半角英数字を含む〇文字以上で入力してください。";
         }
 
     }
@@ -87,8 +88,10 @@
 
     <form action="shouhinichiran.php" method="post">
     <button class="centered_button">スキップ</button>
+    <p class="has-text-danger"><?=$msg?></p>
     <?php
-    echo '<p v-if="!isValidPassword" class="has-text-danger">有効なメールアドレスではありません。半角英数字を含む〇文字以上で入力してください。</p></div>';
+    //echo '<p v-if="!isValidPassword" class="has-text-danger">有効なメールアドレスではありません。半角英数字を含む〇文字以上で入力してください。</p>
+    echo '</div>';
     echo '</form>';
     echo '<script src="scripts/signup.js" type="text/javascript"></script>';
     ?>
