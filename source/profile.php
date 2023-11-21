@@ -13,10 +13,16 @@
  <p><button type="submit" class="b button is-link" id="register_btn">保存</button></p>
 </form>
  <br>
+
+ <?php
+ $username=$_SESSION['user']['user_name'];
+ $userpassword=$_SESSION['user']['user_password'];
+ ?>
+
  <p>ユーザーネーム</p>
-    <input placeholder="ユーザーネーム" type="text" id="user_name">
+    <input placeholder="ユーザーネーム" type="text" id="user_name" value=<?=$username?>>
  <p>パスワード</p>
-    <input placeholder="パスワード" type="password" id="user_password">
+    <input placeholder="パスワード" type="text" id="user_password" value=<?=$userpassword?>>
  <p>住所</p>
     <input placeholder="住所または郵便番号を入力してください" type="address" id="user_address">
 </div>

@@ -11,5 +11,5 @@
     $update_user_inform = $pdo->prepare('select * from user where user_id=?');
     $update_user_inform->execute([$_SESSION['user']["user_id"]]);
     $data = $update_user_inform->fetchAll();
-    $_SESSION['user'] = ["user_id" => $data[0]["user_id"],"mail_address" => $data[0]["mail_address"],"user_name" => $data[0]["user_name"]];
+    $_SESSION['user'] = ["user_id" => $data[0]["user_id"],"mail_address" => $data[0]["mail_address"],"user_name" => $data[0]["user_name"],"user_password" => $data[0]["user_password"]];
 exit;
