@@ -1,18 +1,18 @@
 <?php session_start(); ?>
 <?php require 'modules/db.php'?>
 <?php require 'modules/header.php'; ?>
+<?php require 'modules/utilcommon.php'; ?>
+
 
 <?php
     echo '<form action="signup.php" method="post">';
     echo '<h1 class="page_title">新規登録</h1>';
 
     echo '<div id="app">';?>
-<h1 class="page_title">新規登録</h1>
-
-<div id="app">
-</div>
 <!--ozeki-->
     <?php
+
+    $msg ='';
 
     if(isset($_SESSION['user'])){
         unset($_SESSION['user']);
@@ -20,15 +20,14 @@
     }
     
     if(!empty($_POST)){ //POST情報があるか(登録ボタンが押された後か)
-        var_dump($_POST['mailaddress']);
+        //var_dump($_POST['mailaddress']);
     $username = $_POST['username'];
     $mailaddress = $_POST['mailaddress'];
     $password = $_POST['password'];
 
-    $pattern = "</^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/>";
+    $pattern = "|^[0-9a-z_./?-]+@([0-9a-z-]+\.)+[0-9a-z-]+$|";
 
-        if (preg_match($pattern, $mailaddress ) ) {
-        echo "正しい形式のメールアドレスです。";
+        if (preg_match($pattern,$mailaddress)) {
         $pdo = new PDO($connect,USER,PASS);
 
         //同じメールアドレスが登録されているかクエリを送る
@@ -55,10 +54,10 @@
             //マイページ画面に遷移する
             redirect('mypage.php');
         }else{
-            echo '<p>すでにメールアドレスが登録されています。ログインを行ってください</p>';
+        $msg = 'すでにメールアドレスが登録されています。ログインを行ってください';
         }
         } else {
-        echo "不正な形式のメールアドレスです。";
+        $msg = "有効なメールアドレスではありません。半角英数字を含む〇文字以上で入力してください。";
         }
 
     }
@@ -89,36 +88,12 @@
 
     <form action="shouhinichiran.php" method="post">
     <button class="centered_button">スキップ</button>
-    </form>
-
-    echo '<div class="centered_input_wide">';
-    echo '<p>ユーザーネーム</p>';
-    echo '<input placeholder="ユーザーネーム" type="text" name="user_name">';
-
-    echo '<p>メールアドレス</p>';
-    echo '<input placeholder="メールアドレス" type="text" name="mail_address">';
-
-    echo '<p>パスワード</p>';
-    echo '<input v-model="password" placeholder="パスワード" type="password" name="user_password">';
-    echo '</div><br>';
-    echo '<button class="centered_button">登録</button><br>';
-    echo '</form>';
-    echo '<form action="shouhinichiran.php" method="post">';
-    echo '<button class="centered_button">スキップ</button>';
-    echo '</form>';
+    <p class="has-text-danger"><?=$msg?></p>
     <?php
-    echo '<p v-if="!isValidPassword" class="has-text-danger">有効なメールアドレスではありません。半角英数字を含む〇文字以上で入力してください。</p></div>';
+    //echo '<p v-if="!isValidPassword" class="has-text-danger">有効なメールアドレスではありません。半角英数字を含む〇文字以上で入力してください。</p>
+    echo '</div>';
     echo '</form>';
     echo '<script src="scripts/signup.js" type="text/javascript"></script>';
     ?>
-    <!--output-->
-<?php 
-    $pdo = new PDO($connect,USER,PASS);
-    $sql=$pdo->prepare('INSERT INTO user(role_id,user_name,mail_address,user_password,user_delete_flg) values(?,?,?,?,"false")');
-    $sql->execute([
-        'U',$_POST['user_name'],$_POST['mail_address'],$_POST['user_password']]);
-
-    ?>
-<!--output-->
 
 <?php require 'modules/footer.php'; ?>
