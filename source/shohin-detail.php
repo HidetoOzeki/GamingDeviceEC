@@ -29,7 +29,7 @@ $result = $sql->fetchAll();
         <span style="font-size: 1.5em" class="detail-prices">￥<?= $result[0]["price"] ?></span>
     </div>
     
-    <div class="cart_btn" align="right" style="margin: 3%"><button type="submit">カートに追加</button></div>
+    <div class="cart_btn" align="right" style="margin: 3%"><input type="hidden" id="insert_product" value="<?= $_GET['detail_pd'] ?>"><button id="cart_insert" type="submit">カートに追加</button></div>
 
     <style>
    h1{
@@ -45,9 +45,10 @@ $result = $sql->fetchAll();
         }
     }
     ?>
-        <h1>商品比較</h1>
-        <?php
-        if(count($compare_product) > 0):
+    
+    <?php
+    if(count($compare_product) > 0):
+        echo '<h1>商品比較</h1>';
         $result = implode(",",$compare_product);
         $sql = $pdo->query('select * from product where product_id IN('.$result.')');
         foreach($sql as $row):
@@ -79,5 +80,7 @@ $result = $sql->fetchAll();
     <?php require 'modules/navigation.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2/dist/vue.global.js"></script>
     <script src="https://unpkg.com/vue-star-rating@next/dist/VueStarRating.umd.min.js"></script>
+    <script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
+    <script src="./scripts/cart_insert.js"></script>
     <script src="./scripts/shohin-detail.js"></script>
     <?php require 'modules/footer.php'; ?>

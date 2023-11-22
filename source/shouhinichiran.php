@@ -14,13 +14,26 @@
             if(isset($_GET['price'])){
                 switch($_GET['price']){
                     case '0';
-                        $price_inform = '1';
+                        $price_first = 0;
+                        $price_last = 1500;
                         break;
-                    case '0';
-                        $price_inform = '1';
+                    case '1';
+                        $price_first = 1501;
+                        $price_last = 10000;
+                        break;
+                    case '2';
+                        $price_first = 10001;
+                        $price_last = 50000;
+                        break;
+                    case '3';
+                        $price_first = 50001;
+                        $price_last = 99999;
+                        break;
+                    case '4';
+                        $price_last = 100000;
                         break;
                 }
-                $verify[] = "price > ".$_GET['price'];
+                $verify[] = $price_first." < price and price < ".$price_last;
             }
             $msg = implode(" and ",$verify);
             $sql = $pdo->query('select * from product where '.$msg.'');
