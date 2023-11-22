@@ -15,7 +15,8 @@ function setData(data){
     $('#user_address').val(data.address1+data.address2+data.address3);
 }
 $(function(){
-    $("#btn").on("click",function(){
+    $("#user_address").on("keypress",function(e){
+        if(e.key === 'Enter' || e.keyCode === 13){
         $.ajax({
             url: "https://zipcloud.ibsnet.co.jp/api/search?zipcode="+$('#user_address').val(),
             dataType:'jsonp'
@@ -28,5 +29,7 @@ $(function(){
         }).fail(function(data){
             alert("通信に失敗しました");
         });
-    });
+    }
+    }
+    );
 });
