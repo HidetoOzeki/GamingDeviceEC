@@ -26,7 +26,7 @@
  <p>パスワード</p>
     <input placeholder="パスワード" type="text" id="user_password" value=<?=$userpassword?>>
  <p>住所</p>
-    <input placeholder="住所または郵便番号を入力してください" v-bind="zipcode" type="address" id="user_address"><button id="btn">検索</button>
+    <input placeholder="郵便番号を入力しEnterキーを押してください" v-bind="zipcode" type="address" id="user_address">
    </div>
 </div>
 <script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
