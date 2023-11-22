@@ -3,6 +3,8 @@
 <?php require 'modules/header.php'; ?>
 <?php require 'modules/utilcommon.php'; ?>
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
 
 <?php
     echo '<form action="signup.php" method="post">';
@@ -80,14 +82,14 @@
 
     <br>
 
-    <button type="submit" class="centered_button">登録</button> 
+    <button type="submit" class="centered_button button is-success is-outlined is-rounded">登録 <i class= "far fa-check-circle"></i></button> 
 
     <br>
 
     </form>
 
     <form action="shouhinichiran.php" method="post">
-    <button class="centered_button">スキップ</button>
+    <button class="centered_button button is-info is-outlined is-rounded">スキップ <i class= "far fa-hand-point-right"></i></button>
     <p class="has-text-danger"><?=$msg?></p>
     <?php
     //echo '<p v-if="!isValidPassword" class="has-text-danger">有効なメールアドレスではありません。半角英数字を含む〇文字以上で入力してください。</p>
