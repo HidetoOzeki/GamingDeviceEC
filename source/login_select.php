@@ -9,7 +9,7 @@
         $result = "none";
         echo json_encode(['msg' => [$result]]);
     }else {
-        $_SESSION['user'] = ["user_id" => $data[0]["user_id"],"mail_address" => $data[0]["mail_address"],"user_name" => $data[0]["user_name"]];
+        $_SESSION['user'] = ["user_id" => $data[0]["user_id"],"mail_address" => $data[0]["mail_address"],"user_name" => $data[0]["user_name"],"user_password" => $data[0]["user_password"]];
         $result = "success";
         echo json_encode(['msg' => [$result]]);
     }
