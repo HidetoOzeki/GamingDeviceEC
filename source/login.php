@@ -9,7 +9,7 @@
     echo '<input placeholder="メールアドレス" type="text" id="mail_address">';
 
     echo '<p>パスワード</p>';
-    echo '<input placeholder="パスワード" name="password" type="password" id="password">';
+    echo '<input placeholder="パスワード" name="password" type="password" id="user_password">';
     echo '</div>';
     echo '<br>';
     echo '<a href="signup.php" class="sinki_rinku">←新規登録</a><br>';
