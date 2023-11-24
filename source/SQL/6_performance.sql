@@ -12,4 +12,4 @@ PRIMARY KEY (performance_id),
 FOREIGN KEY (product_id) REFERENCES product(product_id)
 );
 
-INSERT INTO performance() values("パフォーマンスID",商品ID,CPU,メモリ,ストレージ容量,バッテリー容量,画面サイズ,解像度,重さ);
+INSERT INTO performance values("000001",1,NULL,NULL,NULL,NULL,150,50,5);
