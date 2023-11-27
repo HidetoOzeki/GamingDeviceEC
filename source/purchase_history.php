@@ -1,4 +1,6 @@
-<?php require 'modules/utilcommon.php'?>
+<?php session_start(); ?>
+<?php require 'modules/db.php' ?>
+<?php require 'modules/utilcommon.php' ?>
 <?php require 'modules/header.php'; ?>
 <?php require 'modules/serach_box.php'?>
 
@@ -26,9 +28,9 @@
             $sql->execute([$product['product_id']]);
             foreach($sql as $item){
                 echo '<div class="purchased_item">
-                <img class="purchased_item_img" src="img/monitor-img.png" alt="">
+                <img class="purchased_item_img" src="img/product_image/', $item['product_id'] ,'.png" alt="">
                 <div class="purchased_item_description">
-                <p>Quick Brown Fox Jumps over the lazy dog.</p>
+                <p> ' , $item['product_name'] , '</p>
                 <form action="post_review.php" method="post">
                 <button type="submit">レビューを書く</button>
                 </form>
