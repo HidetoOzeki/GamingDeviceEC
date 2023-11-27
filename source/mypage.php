@@ -1,6 +1,14 @@
 <?php session_start(); ?>
 <?php require 'modules/db.php'; ?>
 <?php require 'modules/header.php'; ?>
+<?php require 'modules/utilcommon.php'; ?>
+<?php
+  
+  if(!isset($_SESSION['user'])){
+    
+     redirect("login.php");
+}
+?>
     <style>
         p{
           text-align:center;
