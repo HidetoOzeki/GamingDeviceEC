@@ -9,4 +9,4 @@ FOREIGN KEY (user_id) REFERENCES user(user_id),
 FOREIGN KEY (product_id) REFERENCES product(product_id)
 );
 
-INSERT INTO review values(ユーザーID,商品ID,CURRENT_DATE(),評価値,"レビューの内容：********************");
+INSERT INTO review values(1,2,CURRENT_DATE(),2.5,"レビューの内容：********************"),(2,2,CURRENT_DATE(),0.5,"レビューの内容：********************"),(3,2,CURRENT_DATE(),1,"レビューの内容：********************");
