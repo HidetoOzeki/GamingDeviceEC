@@ -1,6 +1,21 @@
 <?php require 'modules/header.php'; ?>
+<?php require 'modules/db.php'?>
+
 
     <h1 class="page_title_1">削除が完了しました</h1>
+<?php
+$pdo = new PDO($connect,USER,PASS);
+if(isset($_POST['product_id'])){
+$sql=$pdo->prepare('update product set product_delete_flg = ? where product_id=?');
+$sql->execute([
+    'true',$_POST['product_id']
+]);}
+if(isset($_POST['user_id'])){
+$sql=$pdo->prepare('update user set user_delete_flg = ? where user_id=?');
+$sql->execute([
+  'true',$_POST['user_id']
+]);}
+?>
 
     <br>
     <form action="admin_control.php">
