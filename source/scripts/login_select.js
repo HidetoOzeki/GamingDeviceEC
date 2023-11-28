@@ -9,7 +9,11 @@ $(function(){
             if(result.msg[0]=="none"){
                 $("#check_input").text("入力内容が間違っています。メールアドレス、またはパスワードが違います。");
             }else if(result.msg[0]=="success"){
-                $('form').submit();
+                if(result.msg[1]=="U"){
+                    location.href="mypage.php";
+                }else if(result.msg[1]=="M"){
+                    location.href="admin_control.php";
+                }
             }
         });
     });

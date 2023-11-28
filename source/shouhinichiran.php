@@ -3,7 +3,12 @@
 <?php require 'modules/serach_box.php'; ?>
         <?php
         $pdo = new PDO($connect,USER,PASS);
-        if(isset($_GET['purpose']) || isset($_GET['bland']) || isset($_GET['price'])):
+        if(isset($_GET['product_name'])){
+            $search_product = "%".$_GET['product_name']."%";
+            $serach_sql = $pdo->prepare('select * from product where product_name LIKE ?');
+            $serach_sql->execute([$search_product]);
+            $sql = $serach_sql->fetchAll();
+        }else if(isset($_GET['purpose']) || isset($_GET['bland']) || isset($_GET['price'])):
             $verify = [];
             if(isset($_GET['purpose'])){
                 $verify[] = "purpose_id = '".$_GET['purpose']."'";
@@ -50,7 +55,7 @@
                     <form action="shohin-detail.php" method="get" class="product_form">
                         <div class="container-heart">
                             <input type="hidden" name="detail_pd" value="<?= $row['product_id'] ?>" id="detail_pd">
-                            <button type="submit" class="product_btn"><img src="./img/<?= $row['product_id'] ?>.png" class="product_img"/></button>
+                            <button type="submit" class="product_btn"><img src="./img/product_image/<?= $row['product_id'] ?>.png" class="product_img"/></button>
                             <div class="temp">
                                 <vue-star color="#F05654">
                                     <i slot="icon" class="fa fa-heart fa-lg" id="icon"></i>
@@ -63,7 +68,7 @@
                     <form action="shohin-detail.php" method="get" class="product_form">
                         <div class="container-heart">
                             <input type="hidden" name="detail_pd" value="<?= $row['product_id'] ?>" id="detail_pd">
-                            <button type="submit" class="product_btn"><img src="./img/<?= $row['product_id'] ?>.png" class="product_img"/></button>
+                            <button type="submit" class="product_btn"><img src="./img/product_image/<?= $row['product_id'] ?>.png" class="product_img"/></button>
                             <div class="temp">
                                 <vue-star color="#F05654" id="vuestar">
                                     <i slot="icon" class="fa fa-heart fa-lg" id="icon"></i>
