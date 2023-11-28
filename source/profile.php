@@ -13,14 +13,24 @@
  <p><button type="submit" class="b button is-link" id="register_btn">保存</button></p>
 </form>
  <br>
+
+ <?php
+ $username=$_SESSION['user']['user_name'];
+ $userpassword=$_SESSION['user']['user_password'];
+ ?>
+
+ <div id="app">
+
  <p>ユーザーネーム</p>
-    <input placeholder="ユーザーネーム" type="text" id="user_name">
+    <input placeholder="ユーザーネーム" type="text" id="user_name" value=<?=$username?>>
  <p>パスワード</p>
-    <input placeholder="パスワード" type="password" id="user_password">
+    <input placeholder="パスワード" type="text" id="user_password" value=<?=$userpassword?>>
  <p>住所</p>
-    <input placeholder="住所" type="address" id="user_address">
+    <input placeholder="郵便番号を入力しEnterキーを押してください" v-bind="zipcode" type="address" id="user_address">
+   </div>
 </div>
 <script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
 <script src="./scripts/user_profile_update.js"></script>
+<script src="./scripts/profile_address.js"></script>
 <?php require 'modules/navigation.php'; ?>
 <?php require 'modules/footer.php'; ?>

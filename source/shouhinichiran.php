@@ -3,7 +3,12 @@
 <?php require 'modules/serach_box.php'; ?>
         <?php
         $pdo = new PDO($connect,USER,PASS);
-        if(isset($_GET['purpose']) || isset($_GET['bland']) || isset($_GET['price'])):
+        if(isset($_GET['product_name'])){
+            $search_product = "%".$_GET['product_name']."%";
+            $serach_sql = $pdo->prepare('select * from product where product_name LIKE ?');
+            $serach_sql->execute([$search_product]);
+            $sql = $serach_sql->fetchAll();
+        }else if(isset($_GET['purpose']) || isset($_GET['bland']) || isset($_GET['price'])):
             $verify = [];
             if(isset($_GET['purpose'])){
                 $verify[] = "purpose_id = '".$_GET['purpose']."'";
@@ -14,13 +19,26 @@
             if(isset($_GET['price'])){
                 switch($_GET['price']){
                     case '0';
-                        $price_inform = '1';
+                        $price_first = 0;
+                        $price_last = 1500;
                         break;
-                    case '0';
-                        $price_inform = '1';
+                    case '1';
+                        $price_first = 1501;
+                        $price_last = 10000;
+                        break;
+                    case '2';
+                        $price_first = 10001;
+                        $price_last = 50000;
+                        break;
+                    case '3';
+                        $price_first = 50001;
+                        $price_last = 99999;
+                        break;
+                    case '4';
+                        $price_last = 100000;
                         break;
                 }
-                $verify[] = "price > ".$_GET['price'];
+                $verify[] = $price_first." < price and price < ".$price_last;
             }
             $msg = implode(" and ",$verify);
             $sql = $pdo->query('select * from product where '.$msg.'');
@@ -37,7 +55,7 @@
                     <form action="shohin-detail.php" method="get" class="product_form">
                         <div class="container-heart">
                             <input type="hidden" name="detail_pd" value="<?= $row['product_id'] ?>" id="detail_pd">
-                            <button type="submit" class="product_btn"><img src="./img/<?= $row['product_id'] ?>.png" class="product_img"/></button>
+                            <button type="submit" class="product_btn"><img src="./img/product_image/<?= $row['product_id'] ?>.png" class="product_img"/></button>
                             <div class="temp">
                                 <vue-star color="#F05654">
                                     <i slot="icon" class="fa fa-heart fa-lg" id="icon"></i>
@@ -50,7 +68,7 @@
                     <form action="shohin-detail.php" method="get" class="product_form">
                         <div class="container-heart">
                             <input type="hidden" name="detail_pd" value="<?= $row['product_id'] ?>" id="detail_pd">
-                            <button type="submit" class="product_btn"><img src="./img/<?= $row['product_id'] ?>.png" class="product_img"/></button>
+                            <button type="submit" class="product_btn"><img src="./img/product_image/<?= $row['product_id'] ?>.png" class="product_img"/></button>
                             <div class="temp">
                                 <vue-star color="#F05654" id="vuestar">
                                     <i slot="icon" class="fa fa-heart fa-lg" id="icon"></i>

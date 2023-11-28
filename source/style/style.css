@@ -261,9 +261,41 @@ body {
 
 
 
-
-
-
+.detail_pd {
+    appearance: none;
+    height: 16px; /* バーの高さ */
+    border-radius: 10px; /* バーの両端の丸み */
+    border: solid 3px #dff1ff; /* バー周囲の線 */
+    width: 130px;
+}
+.compare_pd {
+  appearance: none;
+  height: 16px; /* バーの高さ */
+  border-radius: 10px; /* バーの両端の丸み */
+  border: solid 3px #dff1ff; /* バー周囲の線 */
+  width: 130px;
+}
+/* Thumb: Chrome, Safari, Opera, Edge Chromium */
+.detail_pd::-webkit-slider-thumb {
+    appearance: none;
+    background: none;
+}
+   
+/* Thumb: Firefox */
+.detail_pd::-moz-range-thumb {
+    appearance: none;
+    background: none;
+}
+.compare_pd::-webkit-slider-thumb {
+    appearance: none;
+    background: none;
+}
+   
+/* Thumb: Firefox */
+.compare_pd::-moz-range-thumb {
+    appearance: none;
+    background: none;
+}
 
 
 
@@ -463,18 +495,22 @@ purchase_history > item{
 .compare_product_img{
     width: 100px;
     height: 100px;
-    margin-left: 5%;
+    margin-left: 25px;
 }
 
 .detail-prices{
     position: absolute;
     bottom: 5px;
-    right: 25px; 
+    right: 25px;
 }
 
 /*shohin_detailの画像の横に文字が並ぶようにする*/
 .hikaku{
-    display: inline-block;
+    float: left;
+    margin-bottom: -10px;
+}
+.compare_table{
+    margin-bottom: 15px;
 }
 .param{
     pointer-events: none;
