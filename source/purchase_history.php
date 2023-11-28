@@ -32,6 +32,7 @@
                 <div class="purchased_item_description">
                 <p> ' , $item['product_name'] , '</p>
                 <form action="post_review.php" method="post">
+                <input type="hidden" name="product_id" value="', $item['product_id'] ,'">
                 <button type="submit">レビューを書く</button>
                 </form>
                 </div>
