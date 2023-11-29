@@ -27,10 +27,14 @@
             $sql = $pdo->prepare('select * from product where product_id = ?');
             $sql->execute([$product['product_id']]);
             foreach($sql as $item){
-                echo '<div class="purchased_item">
+                echo '
+                <form action="shohin-detail.php" method="GET" id="jump_to_detail">
+                <div class="purchased_item" id="purchased_item_area">
+                <input type="hidden" name="detail_pd" value="',$item['product_id'],'" id="detail_pd">
                 <img class="purchased_item_img" src="img/product_image/', $item['product_id'] ,'.png" alt="">
                 <div class="purchased_item_description">
                 <p> ' , $item['product_name'] , '</p>
+                </form>
                 <form action="post_review.php" method="post">
                 <input type="hidden" name="product_id" value="', $item['product_id'] ,'">
                 <button type="submit">レビューを書く</button>
@@ -42,11 +46,9 @@
     }
 
     ?>
-
-    <?php for($i = 0;$i < 6;$i++): ?>
-    <?php endfor; ?>
 </div>
-
+<script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
+<script src="./scripts/purchase_history_jumpToDetail.js"></script>
 
 <?php require 'modules/navigation.php';?>
 <?php require 'modules/footer.php'; ?>
