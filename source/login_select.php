@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require 'modules/db.php'?>
+<?php require 'modules/db.php'; ?>
 <?php
     $pdo = new PDO($connect,USER,PASS);
     $sql = $pdo->prepare('select * from user where user_password=? and mail_address=?');
