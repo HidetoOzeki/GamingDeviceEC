@@ -2,6 +2,7 @@
 <?php require 'modules/db.php'; ?>
 <?php require 'modules/header.php'; ?>
 <?php require 'modules/utilcommon.php'; ?>
+
 <?php
   
   if(!isset($_SESSION['user'])){
@@ -45,7 +46,7 @@
 <div class="link">
     <a href="profile.php">プロフィール編集</a>
 </div>  
-    <p><input type="submit" value="購入履歴" class="button"></p>
+    <p><input type="submit" class="button_de button is-success is-outlined is-rounded" value="購入履歴" class="button"></p>
       </form>
     
 <?php require 'modules/navigation.php'; ?> 

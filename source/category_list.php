@@ -35,7 +35,7 @@ $count = 1;
                         <input type="radio" value="4" name="price">100000円以上
                     </label>
                 </p>
-                <button type="submit" style="position: absolute; top: 70%; right: 25%">検索</button>
+                <button type="submit" style="position: absolute; top: 70%; right: 25%" class="button is-info is-outlined is-rounded" >検索</button>
             </div>
         </form>
     </div>

@@ -28,7 +28,7 @@ $detail_result = $sql->fetchAll();
     </div>
     <p><?= $detail_result[0]["product_name"] ,"/", $detail_result[0]["interface"] ,"/", $detail_result[0]["screen_clearly"] ,"/", $detail_result[0]["product_os"] ,"/", $detail_result[0]["product_size"] ,"/", $detail_result[0]["product_weight"] ,"/", $detail_result[0]["product_color"] ?></p>
     <div id="app" style="position: relative;">
-        <star-rating :increment="0.5" :rating="<?= $detail_result[0]["avg_review_rate"] ?>" :max-rating="3" :read-only="true" :star-size="30"></star-rating>
+        <star-rating :increment="0.1" :rating="<?= $detail_result[0]["avg_review_rate"] ?>" :max-rating="3" :read-only="true" :star-size="30"></star-rating>
         <span style="font-size: 1.5em" class="detail-prices">￥<?= $detail_result[0]["price"] ?></span>
     </div>
     
