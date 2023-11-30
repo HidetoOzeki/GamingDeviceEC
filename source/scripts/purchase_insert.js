@@ -4,11 +4,9 @@ $(function(){
         let amounts = [];
         $(".hidden_pd_num").each(function(key,value){
             product_id.push($(value).val());
-            console.log(product_id);
         });
         $(".hidden_amount").each(function(key,value){
             amounts.push($(value).val());
-            console.log(amounts);
         });
         $.ajax({
             type: "POST",

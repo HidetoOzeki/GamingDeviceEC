@@ -8,4 +8,5 @@
         $sql = $pdo->prepare('insert into purchase_details values((select COALESCE((select max(purchase_id) from purchase),1)),?,?,?)');
         $sql->execute([$i,$_POST['product_nums'][$i-1],$_POST['product_amounts'][$i-1]]);
     }
+    $sql = $pdo->query('delete from cart');
 exit;
