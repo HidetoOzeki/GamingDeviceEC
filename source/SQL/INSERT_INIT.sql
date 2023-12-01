@@ -5,6 +5,8 @@ INSERT INTO bland values("000003","SteelSeries");
 INSERT INTO bland values("000004","Benq");
 INSERT INTO bland values("000005","Corsair");
 INSERT INTO bland values("000006","asus");
+INSERT INTO bland values("000007","Dell");
+INSERT INTO bland values("000008","PHILIPS");
 -- カテゴリ追加
 INSERT INTO category values("000001","モバイル");
 INSERT INTO category values("000002","マウス");
