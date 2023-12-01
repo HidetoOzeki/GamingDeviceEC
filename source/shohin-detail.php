@@ -53,7 +53,7 @@ $detail_result = $sql->fetchAll();
     
     <?php
     if(count($compare_product) > 0):
-        switch($detail_result[0]["category_id"]){
+        /*switch($detail_result[0]["category_id"]){
             case "000001":
                 $max_items = "MAX(cpu) as 'CPU',MAX(memory) as 'メモリ',MAX(storage) as 'ストレージ',MAX(size) as 'サイズ',MAX(weight) as '重さ'";
                 break;
@@ -69,38 +69,38 @@ $detail_result = $sql->fetchAll();
             case "000005":
                 $max_items = "MAX(battery) as 'バッテリー',MAX(screen_clearly) as '解像度',MAX(weight) as '重さ'";
                 break;
-        }
-        $max_column = $pdo->query('select '.$max_items.' from performance');
+        }*/
+        $max_column = $pdo->query('select MAX(cpu) as "CPU",MAX(memory) as "メモリ",MAX(storage) as "ストレージ",MAX(battery) as "バッテリー",MAX(size) as "サイズ",MAX(weight) as "重さ",MAX(screen_clearly) as "解像度" from performance');
         $max_obj = $max_column->fetchAll();
         echo '<h1>商品比較</h1><br>';
         $result = implode(",",$compare_product);
         $compare_sql = $pdo->query('select product.product_id, product_name, category_id, coalesce(cpu,"none") as "CPU", coalesce(memory,"none") as "メモリ", coalesce(storage,"none") as "ストレージ", coalesce(battery,"none") as "バッテリー", coalesce(size,"none") as "サイズ", coalesce(weight,"none") as "重さ",coalesce(screen_clearly,"none") as "解像度" from product INNER JOIN performance ON product.product_id=performance.product_id where product.product_id IN('.$result.')');
         $compare_result = $compare_sql->fetchAll();
+        $range_array_key = array_keys($max_obj[0]);
         foreach($compare_result as $row):
             if($row['category_id']==$detail_result[0]["category_id"]):
         ?>
-                <div class="hikaku">
-                    <span style="display: inline-block; width: 150px;"><?= $row['product_name'] ?></span><br>
-                    <img src="./img/product_image/<?= $row['product_id'] ?>.png" class="compare_product_img">
+                <div style="padding-bottom: 5%;">
+                    <div class="hikaku">
+                        <span style="display: inline-block; width: 150px;"><?= $row['product_name'] ?></span><br>
+                        <img src="./img/product_image/<?= $row['product_id'] ?>.png" class="compare_product_img">
+                    </div>
+                    <table border="1" class="compare_table">
+                        <?php for($i=0;$i<7;$i++):
+                            
+                            if($row[$range_array_key[$i*2]]!="none" && $detail_result[0][$range_array_key[$i*2]]!="none"): ?>
+                                <tr>
+                                    <td><div style="display: inline-block; margin-top: 13px; font-size: 0.7em;"><?= $range_array_key[$i*2] ?></div></td>
+                                    <td>
+                                        <input type="range" max="<?= $max_obj[0][$range_array_key[$i*2]] ?>" min="0" value="<?= $detail_result[0][$range_array_key[$i*2]] ?>" id="detail_pd" class="detail_pd"/>
+                                        <br>
+                                        <input type="range" max="<?= $max_obj[0][$range_array_key[$i*2]] ?>" min="0" value="<?= $row[$range_array_key[$i*2]] ?>" id="compare_pd" class="compare_pd"/>
+                                    </td>
+                                </tr>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                    </table>
                 </div>
-                <table border="1" class="compare_table">
-                    <?php for($i=0;$i<7;$i++):
-                        $range_array = array_slice($row, 6, 17);
-                        $range_array_key = array_keys($range_array);
-                        
-                        
-                        if($range_array[$i]!="none"): ?>
-                            <tr>
-                                <td><div style="display: inline-block; margin-top: 13px; font-size: 0.7em;"><?= $range_array_key[$i*2] ?></div></td>
-                                <td>
-                                    <input type="range" max="<?= $max_obj[0][$range_array_key[$i*2]] ?>" min="0" value="<?= $detail_result[0][$range_array_key[$i*2]] ?>" id="detail_pd" class="detail_pd"/>
-                                    <br>
-                                    <input type="range" max="<?= $max_obj[0][$range_array_key[$i*2]] ?>" min="0" value="<?= $range_array[$i] ?>" id="compare_pd" class="compare_pd"/>
-                                </td>
-                            </tr>
-                        <?php endif; ?>
-                    <?php endfor; ?>
-                </table>
             <?php endif; ?>
         <?php endforeach; ?>
     <?php endif; ?>
