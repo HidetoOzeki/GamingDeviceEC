@@ -22,11 +22,12 @@ const app = new Vue({
             this.price += this.items[value].price;   
         },
         delete_btn(num,index){
-            this.price -= this.items[index].price;
+            this.price -= this.items[index].price*this.amounts[index];
             let params = new URLSearchParams();
             params.append("delete_pd", num);
             axios.post("./cart_delete.php",params).then(function(response){});
             this.items.splice(index,1);
+            this.amounts.splice(index,1);
             if(this.items.length==0){
                 this.check_items = false;
             }

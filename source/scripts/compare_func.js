@@ -4,6 +4,15 @@ $(function(){
       $(e.target).each(function(){
         //let value = $(e.target).parent().parent().parent().parent().parent().find("#detail_pd").val();
         if($(e.target).prop("tagName")=="IMG"){
+          $.ajax({
+            type: "POST",
+            url: "session_check.php",
+          }).done(function(data){
+            let done = JSON.parse(data);
+            if(done.msg[0]=="yet_login"){
+              location.href="login.php";
+            }
+          });
           $(e.target).parent().parent().parent().children().remove("#hidden");
           //let num = $(e.target).parent().parent().find("#detail_pd").val();
           $(".product_form").each(function(){

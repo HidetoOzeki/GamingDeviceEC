@@ -1,4 +1,5 @@
 <?php require 'modules/header.php';?>
+
 <?php require 'modules/db.php'?>
 <h1 class="page_title">登録・削除</h1>
 <div class="wrap_admin_control_item">
