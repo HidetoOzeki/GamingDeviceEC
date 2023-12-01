@@ -42,10 +42,10 @@
                 $verify[] = $price_first." <= price and price < ".$price_last;
             }
             $msg = implode(" and ",$verify);
-            $sql = $pdo->query('select * from product where '.$msg.'');
+            $sql = $pdo->query('select * from product where '.$msg.' and product_delete_flg = "false"');
         ?>
         <?php else: ?>
-            <?php $sql = $pdo->query('select * from product'); ?>
+            <?php $sql = $pdo->query('select * from product where product_delete_flg = "false"'); ?>
         <?php endif; ?>
     <div class="syouhin" id="app">
         <div class="gazou_center">
