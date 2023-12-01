@@ -1,6 +1,7 @@
 <?php require 'modules/header.php'; ?>
 
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
 
 
     <h1 class="page_title">ログイン</h1>
@@ -16,7 +17,8 @@
    <br>
     <a href="signup.php" class="sinki_rinku">←新規登録</a><br>
     <button type="submit" class="centered_button button is-info is-outlined is-rounded" id="mypage_transition" >マイページへ<i class="far fa-hand-point-right"></i></button>
-    </form>
+    
+</form>
 
 
     <p class="has-text-danger" id="check_input"></p>

@@ -3,6 +3,9 @@
 <?php require 'modules/header.php'; ?>
 <?php require 'modules/utilcommon.php'; ?>
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+
 <?php
   
   if(!isset($_SESSION['user'])){
@@ -47,7 +50,8 @@
     <a href="profile.php">プロフィール編集</a>
 </div>  
     <p><input type="submit" class="button_de button is-success is-outlined is-rounded" value="購入履歴" class="button"></p>
-      </form>
+     
+  </form>
     
 <?php require 'modules/navigation.php'; ?> 
 <?php require 'modules/footer.php'; ?>
