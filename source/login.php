@@ -16,7 +16,7 @@
     </div>
    <br>
     <a href="signup.php" class="sinki_rinku">←新規登録</a><br>
-    <button type="submit" class="centered_button button is-info is-outlined is-rounded" id="mypage_transition" >マイページへ<i class="far fa-hand-point-right"></i></button>
+    <button type="button" class="centered_button button is-info is-outlined is-rounded" id="mypage_transition" >マイページへ<i class="far fa-hand-point-right"></i></button>
     
 </form>
 
