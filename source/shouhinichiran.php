@@ -51,7 +51,9 @@
         <div class="gazou_center">
             <?php
             $i = 1;
-            foreach($sql as $row): ?>
+            foreach($sql as $row):
+                if($row['product_delete_flg']=='true')continue;
+            ?>
                 <?php if($i%2==0): ?>
                     <form action="shohin-detail.php" method="get" class="product_form">
                         <div class="container-heart">
