@@ -50,8 +50,8 @@ memory INTEGER,
 storage INTEGER,
 battery INTEGER,
 size INTEGER,
-screen_clearly INTEGER,
 weight INTEGER,
+screen_clearly INTEGER,
 PRIMARY KEY (performance_id),
 FOREIGN KEY (product_id) REFERENCES product(product_id)
 );

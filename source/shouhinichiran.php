@@ -5,7 +5,7 @@
         $pdo = new PDO($connect,USER,PASS);
         if(isset($_GET['product_name'])){
             $search_product = "%".$_GET['product_name']."%";
-            $serach_sql = $pdo->prepare('select * from product where product_name LIKE ?');
+            $serach_sql = $pdo->prepare('select * from product where product_name LIKE ? and product_delete_flg = "false"');
             $serach_sql->execute([$search_product]);
             $sql = $serach_sql->fetchAll();
         }else if(isset($_GET['purpose']) || isset($_GET['bland']) || isset($_GET['price'])):
@@ -23,34 +23,38 @@
                         $price_last = 1500;
                         break;
                     case '1';
-                        $price_first = 1501;
+                        $price_first = 1500;
                         $price_last = 10000;
                         break;
                     case '2';
-                        $price_first = 10001;
+                        $price_first = 10000;
                         $price_last = 50000;
                         break;
                     case '3';
-                        $price_first = 50001;
+                        $price_first = 50000;
                         $price_last = 99999;
                         break;
                     case '4';
-                        $price_last = 100000;
+                        $price_first = 100000;
+                        $price_last = 900000000;
                         break;
                 }
-                $verify[] = $price_first." < price and price < ".$price_last;
+                $verify[] = $price_first." <= price and price < ".$price_last;
             }
             $msg = implode(" and ",$verify);
-            $sql = $pdo->query('select * from product where '.$msg.'');
+            $sql = $pdo->query('select * from product where '.$msg.' and product_delete_flg = "false"');
         ?>
         <?php else: ?>
-            <?php $sql = $pdo->query('select * from product'); ?>
+            <?php $sql = $pdo->query('select * from product where product_delete_flg = "false"'); ?>
         <?php endif; ?>
     <div class="syouhin" id="app">
         <div class="gazou_center">
             <?php
             $i = 1;
-            foreach($sql as $row): ?>
+            foreach($sql as $row):
+                if($row['product_delete_flg']=='true')
+                    continue;
+            ?>
                 <?php if($i%2==0): ?>
                     <form action="shohin-detail.php" method="get" class="product_form">
                         <div class="container-heart">
