@@ -36,7 +36,7 @@ $detail_result = $sql->fetchAll();
 
     <style>
    h1{
-        text-align:center;
+        text-align: center;
         font-size:  25px;
      }
     </style>
@@ -82,7 +82,7 @@ $detail_result = $sql->fetchAll();
         ?>
                 <div style="padding-bottom: 5%;">
                     <div class="hikaku">
-                        <span style="display: inline-block; width: 150px;"><?= $row['product_name'] ?></span><br>
+                        <span style="display: inline-block; width: 138px; margin-left: 15px;"><?= $row['product_name'] ?></span><br>
                         <img src="./img/product_image/<?= $row['product_id'] ?>.png" class="compare_product_img">
                     </div>
                     <table border="1" class="compare_table">
@@ -101,9 +101,32 @@ $detail_result = $sql->fetchAll();
                         <?php endfor; ?>
                     </table>
                 </div>
+            <?php else: ?>
+                <div style="padding-bottom: 5%;">
+                    <h3 style="text-align: center;"><?= $row['product_name'] ?>は同じカテゴリーの製品ではありません。</h3>
+                </div>
             <?php endif; ?>
         <?php endforeach; ?>
     <?php endif; ?>
+    <h1>商品レビュー</h1>
+    <div id="review">
+        <?php
+        $sql = $pdo->prepare('select * from review inner join user on review.user_id=user.user_id where product_id = ?');
+        $sql->execute([$_GET['detail_pd']]);
+        foreach($sql as $row): ?>
+        <div style="margin-bottom: 4%;">
+            <div style="padding: 2.7% 2% 0% 4%; float:left;"><i class="fas fa-user-circle fa-2x"></i></div>
+            <div>
+                <span><?= $row['user_name'] ?></span><br>
+                <star-rating :increment="0.1" :rating="<?= $row['review_rate'] ?>" :max-rating="3" :read-only="true" :star-size="18" style="display: inline-block;"></star-rating>
+                <span style="margin-left: 44%; font-size: 0.8em;"><?= $row['post_date'] ?></span><br>
+                <div style="margin-left: 13%; width: 85%;"><?= $row['review_contents'] ?></div>
+            </div>
+        </div>
+        
+        
+        <?php endforeach; ?>
+    </div>
 </form> 
     <?php require 'modules/navigation.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2/dist/vue.global.js"></script>
