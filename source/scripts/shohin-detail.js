@@ -3,3 +3,8 @@ const app = Vue.createApp({
 })
 app.component('star-rating', VueStarRating.default)
 app.mount('#app')
+const review = Vue.createApp({
+
+})
+review.component('star-rating', VueStarRating.default)
+review.mount("#review");
