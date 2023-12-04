@@ -12,8 +12,6 @@
     <input placeholder="" type="text" name="add_product[]" value="<?= $_POST['input_name'] ?>" required>
     <p>値段</p>
     <input placeholder="" type="text" name="add_product[]" required>
-    <p>スペックID</p>
-    <input placeholder="" type="text" name="spec_id" required>
     <p>インターフェース</p>
     <input placeholder="" type="text" name="spec_interface" required>
     <p>スペック解像度</p>
@@ -26,9 +24,7 @@
     <input placeholder="" type="text" name="spec_weight" required>
     <p>色</p>
     <input placeholder="" type="text" name="spec_color" required>
-    <p>パフォーマンスID</p>
-    <input placeholder="" type="text" name="performance_id" required>
-    <p>CPU</p>
+    <p>CPU</p>  
     <input placeholder="" type="text" name="performance_cpu" required>
     <p>メモリ</p>
     <input placeholder="パスワード" name="performance_memory" type="text">
