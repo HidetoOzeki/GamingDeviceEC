@@ -27,7 +27,7 @@
     <p>CPU</p>  
     <input placeholder="" type="text" name="performance_cpu" required>
     <p>メモリ</p>
-    <input placeholder="パスワード" name="performance_memory" type="text">
+    <input placeholder="" name="performance_memory" type="text">
     <p>ストレージ</p>
     <input placeholder="" type="text" name="performance_storage">
     <p>バッテリー</p>
@@ -40,6 +40,5 @@
     <input placeholder="" type="text" name="performance_weight">
 </div>
    <br>
-    <a href="signup.php" class="sinki_rinku">←新規登録</a><br>
-    <button type="submit" class="centered_button button is-info is-outlined is-rounded" id="mypage_transition" >マイページへ<i class="far fa-hand-point-right"></i></button>
+    <button type="submit" class="centered_button button is-info is-outlined is-rounded" id="mypage_transition" >商品登録<i class="far fa-hand-point-right"></i></button>
     </form>
