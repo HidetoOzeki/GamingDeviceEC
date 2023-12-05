@@ -32,6 +32,4 @@
   .nav_btn:active{
     transform: perspective(40px) translateZ(-15px);
   }
-  .fa-search{
-    background-color: lightgray;
-  }
+  
