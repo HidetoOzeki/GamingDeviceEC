@@ -8,7 +8,6 @@ for($i = 0;$i<count($_POST['add_product']);$i++){
 }
 $product_insert = implode(",",$product_array);
 $msg = implode(",",$product_array);
-var_dump($msg);
 $product = $pdo->query('insert into product(category_id, bland_id, purpose_id, product_name, price, product_delete_flg) values('.$msg.',"false")');
 $sql = $pdo->prepare('insert into product_spec values((select concat("000",(select * FROM (SELECT COALESCE(max(specification_id)+1,1) as "maxcount" from product_spec) as temp))),(select COALESCE((select max(product_id) from product),1)),?,?,?,?,?,?)');
 $sql->execute([$_POST['spec_interface'],$_POST['spec_clearly'],$_POST['spec_os'],$_POST['spec_size'],$_POST['spec_weight'],$_POST['spec_color']]);

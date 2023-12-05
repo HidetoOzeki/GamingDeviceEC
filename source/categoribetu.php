@@ -9,37 +9,42 @@
 <div class="syouhin" id="app">
     <div class="gazou_center">
         <?php
+            $product_result = $sql->fetchAll();
             $i = 1;
-            foreach($sql as $row): ?>
-                <?php if($i%2==0): ?>
-                    <form action="shohin-detail.php" method="get" class="product_form">
-                        <div class="container-heart">
-                            <input type="hidden" name="detail_pd" value="<?= $row['product_id'] ?>" id="detail_pd">
-                            <button type="submit" class="product_btn"><img src="./img/product_image/<?= $row['product_id'] ?>.png" class="product_img"/></button>
-                            <div class="temp">
-                                <vue-star color="#F05654">
-                                    <i slot="icon" class="fa fa-heart fa-lg" id="icon"></i>
-                                </vue-star>
+            if(!empty($product_result)):
+                foreach($product_result as $row): ?>
+                    <?php if($i%2==0): ?>
+                        <form action="shohin-detail.php" method="get" class="product_form">
+                            <div class="container-heart">
+                                <input type="hidden" name="detail_pd" value="<?= $row['product_id'] ?>" id="detail_pd">
+                                <button type="submit" class="product_btn"><img src="./img/product_image/<?= $row['product_id'] ?>.png" class="product_img"/></button>
+                                <div class="temp">
+                                    <vue-star color="#F05654">
+                                        <i slot="icon" class="fa fa-heart fa-lg" id="icon"></i>
+                                    </vue-star>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                    <br>
-                <?php else: ?>
-                    <form action="shohin-detail.php" method="get" class="product_form">
-                        <div class="container-heart">
-                            <input type="hidden" name="detail_pd" value="<?= $row['product_id'] ?>" id="detail_pd">
-                            <button type="submit" class="product_btn"><img src="./img/product_image/<?= $row['product_id'] ?>.png" class="product_img"/></button>
-                            <div class="temp">
-                                <vue-star color="#F05654" id="vuestar">
-                                    <i slot="icon" class="fa fa-heart fa-lg" id="icon"></i>
-                                </vue-star>
+                        </form>
+                        <br>
+                    <?php else: ?>
+                        <form action="shohin-detail.php" method="get" class="product_form">
+                            <div class="container-heart">
+                                <input type="hidden" name="detail_pd" value="<?= $row['product_id'] ?>" id="detail_pd">
+                                <button type="submit" class="product_btn"><img src="./img/product_image/<?= $row['product_id'] ?>.png" class="product_img"/></button>
+                                <div class="temp">
+                                    <vue-star color="#F05654" id="vuestar">
+                                        <i slot="icon" class="fa fa-heart fa-lg" id="icon"></i>
+                                    </vue-star>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                <?php endif; ?>
-            <?php
-            $i++;
-            endforeach; ?>
+                        </form>
+                    <?php endif; ?>
+                <?php
+                $i++;
+                endforeach; ?>
+            <?php else: ?>
+                <h1>商品が見つかりません</h1>
+            <?php endif; ?>
     </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/vue-star@0.0.4/dist/VueStar.js"></script>

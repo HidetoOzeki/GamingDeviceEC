@@ -19,7 +19,10 @@
     padding: 3% 6.5%;
     font-size: 12px;
   }
-  
+  .nav_btn {
+    appearance: none;
+    -webkit-appearance: none;
+  }
   .nav button:active{
     background-color: lightblue;
   }
@@ -29,4 +32,6 @@
   .nav_btn:active{
     transform: perspective(40px) translateZ(-15px);
   }
-  
+  .fa-search{
+    background-color: lightgray;
+  }

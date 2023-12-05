@@ -9,7 +9,7 @@
       float: right;
    }
  </style>
-<form action="mypage.php">
+<form>
  <p><button type="submit" class="b button is-link" id="register_btn">保存</button></p>
 </form>
  <br>

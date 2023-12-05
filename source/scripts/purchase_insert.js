@@ -1,5 +1,6 @@
 $(function(){
-    $(".centered_button").on("click",function(){
+    $(".centered_button").on("click",function(e){
+        e.preventDefault();
         let product_id = [];
         let amounts = [];
         $(".hidden_pd_num").each(function(key,value){
@@ -13,6 +14,8 @@ $(function(){
             url: "purchase_insert.php",
             data: {product_nums: product_id, product_amounts: amounts},
         });
-        location.href="purchase_history.php";
+        $(document).ajaxStop(function() {
+            window.location = "purchase_history.php";
+        });
     });
 });
