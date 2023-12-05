@@ -5,9 +5,8 @@
         $pdo = new PDO($connect,USER,PASS);
         if(isset($_GET['product_name'])){
             $search_product = "%".$_GET['product_name']."%";
-            $serach_sql = $pdo->prepare('select * from product where product_name LIKE ? and product_delete_flg = "false"');
-            $serach_sql->execute([$search_product]);
-            $sql = $serach_sql->fetchAll();
+            $sql = $pdo->prepare('select * from product where product_name LIKE ? and product_delete_flg = "false"');
+            $sql->execute([$search_product]);
         }else if(isset($_GET['purpose']) || isset($_GET['bland']) || isset($_GET['price'])):
             $verify = [];
             if(isset($_GET['purpose'])){

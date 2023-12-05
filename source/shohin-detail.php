@@ -111,7 +111,7 @@ $detail_result = $sql->fetchAll();
     <h1>商品レビュー</h1>
     <div id="review">
         <?php
-        $sql = $pdo->prepare('select * from review inner join user on review.user_id=user.user_id where product_id = ?');
+        $sql = $pdo->prepare('select * from review inner join user on review.user_id=user.user_id where product_id = ? and user_delete_flg="false"');
         $sql->execute([$_GET['detail_pd']]);
         foreach($sql as $row): ?>
         <div style="margin-bottom: 4%;">
