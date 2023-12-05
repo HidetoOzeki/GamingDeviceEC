@@ -9,7 +9,7 @@
       float: right;
    }
  </style>
-<form action="mypage.php">
+<form>
  <p><button type="submit" class="b button is-link" id="register_btn">保存</button></p>
 </form>
  <br>
@@ -27,7 +27,7 @@
  <p>パスワード</p>
     <input placeholder="パスワード" type="text" id="user_password" value=<?=$userpassword?>>
  <p>住所</p>
-    <input placeholder="郵便番号を入力しEnterキーを押してください" value=<?=$user_address?> v-bind="zipcode" type="address" id="user_address">
+    <input placeholder="郵便番号を入力しEnterキーを押してください" v-bind="zipcode" type="address" id="user_address" value=<?=$user_address?>>
    </div>
 </div>
 <script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
