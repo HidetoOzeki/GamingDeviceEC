@@ -8,6 +8,10 @@ INSERT INTO bland values("000006","asus");
 INSERT INTO bland values("000007","Dell");
 INSERT INTO bland values("000008","PHILIPS");
 INSERT INTO bland values("000009","Blue Microphone");
+INSERT INTO bland values("000010","Ducky");
+INSERT INTO bland values("000011","Apple");
+INSERT INTO bland values("000012","Google");
+INSERT INTO bland values("000013","AQUOS");
 -- カテゴリ追加
 INSERT INTO category values("000001","モバイル");
 INSERT INTO category values("000002","マウス");
