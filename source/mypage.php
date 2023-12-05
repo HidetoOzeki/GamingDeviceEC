@@ -37,14 +37,6 @@
         
         }
     </style>
-
-    <?php
-    if(!isset($_SESSION['user'])){
-      header('Location: login.php ');
-    exit();
-    }
-    ?>
-
 <form action="purchase_history.php">
     <h1 class="page_title">マイページ</h1>
     <p><?= $_SESSION['user']['mail_address'] ?></p>
