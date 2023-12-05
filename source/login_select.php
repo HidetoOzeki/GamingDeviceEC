@@ -2,7 +2,7 @@
 <?php require 'modules/db.php'; ?>
 <?php
     $pdo = new PDO($connect,USER,PASS);
-    $sql = $pdo->prepare('select * from user where user_password=? and mail_address=?');
+    $sql = $pdo->prepare('select * from user where user_password=? and mail_address=? and user_delete_flg="false"');
     $sql->execute([$_POST['password'],$_POST['mail_address']]);
     $data = $sql->fetchAll();
     if(empty($data)){

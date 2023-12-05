@@ -490,6 +490,7 @@ purchase_history > item{
 
 /*shohin_detailの画像デザイン*/
 .product_detail_img{
+    width: 100%;
     border: solid 3px;
 }
 .compare_product_img{

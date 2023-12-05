@@ -72,7 +72,8 @@ $detail_result = $sql->fetchAll();
         }*/
         $max_column = $pdo->query('select MAX(cpu) as "CPU",MAX(memory) as "メモリ",MAX(storage) as "ストレージ",MAX(battery) as "バッテリー",MAX(size) as "サイズ",MAX(weight) as "重さ",MAX(screen_clearly) as "解像度" from performance');
         $max_obj = $max_column->fetchAll();
-        echo '<h1>商品比較</h1><br>';
+        echo '<h1>商品比較</h1>';
+        echo '<span style="font-size: 0.9em; margin-left: 190px;"><span style="color: red;">赤色:選択商品</span> <span style="color: blue;">青色:比較商品</span></span>';
         $result = implode(",",$compare_product);
         $compare_sql = $pdo->query('select product.product_id, product_name, category_id, coalesce(cpu,"none") as "CPU", coalesce(memory,"none") as "メモリ", coalesce(storage,"none") as "ストレージ", coalesce(battery,"none") as "バッテリー", coalesce(size,"none") as "サイズ", coalesce(weight,"none") as "重さ",coalesce(screen_clearly,"none") as "解像度" from product INNER JOIN performance ON product.product_id=performance.product_id where product.product_id IN('.$result.')');
         $compare_result = $compare_sql->fetchAll();
@@ -82,7 +83,7 @@ $detail_result = $sql->fetchAll();
         ?>
                 <div style="padding-bottom: 5%;">
                     <div class="hikaku">
-                        <span style="display: inline-block; width: 138px; margin-left: 15px;"><?= $row['product_name'] ?></span><br>
+                        <span style="display: inline-block; width: 120px; margin-left: 15px;"><?= $row['product_name'] ?></span><br>
                         <img src="./img/product_image/<?= $row['product_id'] ?>.png" class="compare_product_img">
                     </div>
                     <table border="1" class="compare_table">
@@ -96,6 +97,7 @@ $detail_result = $sql->fetchAll();
                                         <br>
                                         <input type="range" max="<?= $max_obj[0][$range_array_key[$i*2]] ?>" min="0" value="<?= $row[$range_array_key[$i*2]] ?>" id="compare_pd" class="compare_pd"/>
                                     </td>
+                                    <td style="width: 35px;"><div><?= $detail_result[0][$range_array_key[$i*2]] ?></div><div><?= $row[$range_array_key[$i*2]] ?></div></td>
                                 </tr>
                             <?php endif; ?>
                         <?php endfor; ?>
