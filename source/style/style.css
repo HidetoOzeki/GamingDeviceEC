@@ -507,12 +507,10 @@ purchase_history > item{
 
 /*shohin_detailの画像の横に文字が並ぶようにする*/
 .hikaku{
-    float: left;
-    margin-bottom: -10px;
+    display: inline-block;
+    
 }
-.compare_table{
-    margin-bottom: 15px;
-}
+
 .param{
     pointer-events: none;
 }

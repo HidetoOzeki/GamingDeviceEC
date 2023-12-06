@@ -70,23 +70,29 @@ $detail_result = $sql->fetchAll();
                 $max_items = "MAX(battery) as 'バッテリー',MAX(screen_clearly) as '解像度',MAX(weight) as '重さ'";
                 break;
         }*/
-        $max_column = $pdo->query('select MAX(cpu) as "CPU",MAX(memory) as "メモリ",MAX(storage) as "ストレージ",MAX(battery) as "バッテリー",MAX(size) as "サイズ",MAX(weight) as "重さ",MAX(screen_clearly) as "解像度" from performance');
+        $max_column = $pdo->prepare('select MAX(cpu) as "CPU",MAX(memory) as "メモリ",MAX(storage) as "ストレージ",MAX(battery) as "バッテリー",MAX(size) as "サイズ",MAX(weight) as "重さ",MAX(screen_clearly) as "解像度" 
+                                    from performance inner join product on performance.product_id=product.product_id 
+                                    where category_id = ?');
+        $max_column->execute([$detail_result[0]["category_id"]]);
         $max_obj = $max_column->fetchAll();
         echo '<h1>商品比較</h1>';
         echo '<span style="font-size: 0.9em; margin-left: 190px;"><span style="color: red;">赤色:選択商品</span> <span style="color: blue;">青色:比較商品</span></span>';
         $result = implode(",",$compare_product);
-        $compare_sql = $pdo->query('select product.product_id, product_name, category_id, coalesce(cpu,"none") as "CPU", coalesce(memory,"none") as "メモリ", coalesce(storage,"none") as "ストレージ", coalesce(battery,"none") as "バッテリー", coalesce(size,"none") as "サイズ", coalesce(weight,"none") as "重さ",coalesce(screen_clearly,"none") as "解像度" from product INNER JOIN performance ON product.product_id=performance.product_id where product.product_id IN('.$result.')');
+        $compare_sql = $pdo->query('select product.product_id, product_name, category_id, coalesce(cpu,"none") as "CPU", coalesce(memory,"none") as "メモリ", coalesce(storage,"none") as "ストレージ", coalesce(battery,"none") as "バッテリー", coalesce(size,"none") as "サイズ", coalesce(weight,"none") as "重さ",coalesce(screen_clearly,"none") as "解像度" 
+                                    from product INNER JOIN performance ON product.product_id=performance.product_id 
+                                    where product.product_id IN('.$result.')');
         $compare_result = $compare_sql->fetchAll();
         $range_array_key = array_keys($max_obj[0]);
         foreach($compare_result as $row):
             if($row['category_id']==$detail_result[0]["category_id"]):
         ?>
-                <div style="padding-bottom: 5%;">
+            
+                <div>
                     <div class="hikaku">
                         <span style="display: inline-block; width: 120px; margin-left: 15px;"><?= $row['product_name'] ?></span><br>
                         <img src="./img/product_image/<?= $row['product_id'] ?>.png" class="compare_product_img">
                     </div>
-                    <table border="1" class="compare_table">
+                    <table border="1" class="compare_table" style="display: inline-block;">
                         <?php for($i=0;$i<7;$i++):
                             
                             if($row[$range_array_key[$i*2]]!="none" && $detail_result[0][$range_array_key[$i*2]]!="none"): ?>
@@ -97,12 +103,15 @@ $detail_result = $sql->fetchAll();
                                         <br>
                                         <input type="range" max="<?= $max_obj[0][$range_array_key[$i*2]] ?>" min="0" value="<?= $row[$range_array_key[$i*2]] ?>" id="compare_pd" class="compare_pd"/>
                                     </td>
-                                    <td style="width: 35px;"><div><?= $detail_result[0][$range_array_key[$i*2]] ?></div><div><?= $row[$range_array_key[$i*2]] ?></div></td>
+                                    <td style="width: 40px;"><div><?= $detail_result[0][$range_array_key[$i*2]] ?></div><div><?= $row[$range_array_key[$i*2]] ?></div></td>
                                 </tr>
                             <?php endif; ?>
                         <?php endfor; ?>
                     </table>
                 </div>
+                
+              
+                
             <?php else: ?>
                 <div style="padding-bottom: 5%;">
                     <h3 style="text-align: center;"><?= $row['product_name'] ?>は同じカテゴリーの製品ではありません。</h3>
