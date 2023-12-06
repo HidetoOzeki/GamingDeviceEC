@@ -31,9 +31,7 @@ $detail_result = $sql->fetchAll();
         <star-rating :increment="0.1" :rating="<?= $detail_result[0]["avg_review_rate"] ?>" :max-rating="3" :read-only="true" :star-size="30"></star-rating>
         <span style="font-size: 1.5em" class="detail-prices">￥<?= $detail_result[0]["price"] ?></span>
     </div>
-    
     <div class="cart_btn" align="right" style="margin: 3%"><input type="hidden" id="insert_product" value="<?= $_GET['detail_pd'] ?>"><button id="cart_insert" type="submit">カートに追加</button></div>
-
     <style>
    h1{
         text-align: center;
@@ -50,7 +48,6 @@ $detail_result = $sql->fetchAll();
         }
     }
     ?>
-    
     <?php
     if(count($compare_product) > 0):
         /*switch($detail_result[0]["category_id"]){
@@ -86,32 +83,27 @@ $detail_result = $sql->fetchAll();
         foreach($compare_result as $row):
             if($row['category_id']==$detail_result[0]["category_id"]):
         ?>
-            
-                <div>
-                    <div class="hikaku">
-                        <span style="display: inline-block; width: 120px; margin-left: 15px;"><?= $row['product_name'] ?></span><br>
-                        <img src="./img/product_image/<?= $row['product_id'] ?>.png" class="compare_product_img">
-                    </div>
-                    <table border="1" class="compare_table" style="display: inline-block;">
-                        <?php for($i=0;$i<7;$i++):
-                            
-                            if($row[$range_array_key[$i*2]]!="none" && $detail_result[0][$range_array_key[$i*2]]!="none"): ?>
-                                <tr>
-                                    <td><div style="display: inline-block; margin-top: 13px; font-size: 0.7em;"><?= $range_array_key[$i*2] ?></div></td>
-                                    <td>
-                                        <input type="range" max="<?= $max_obj[0][$range_array_key[$i*2]] ?>" min="0" value="<?= $detail_result[0][$range_array_key[$i*2]] ?>" id="detail_pd" class="detail_pd"/>
-                                        <br>
-                                        <input type="range" max="<?= $max_obj[0][$range_array_key[$i*2]] ?>" min="0" value="<?= $row[$range_array_key[$i*2]] ?>" id="compare_pd" class="compare_pd"/>
-                                    </td>
-                                    <td style="width: 40px;"><div><?= $detail_result[0][$range_array_key[$i*2]] ?></div><div><?= $row[$range_array_key[$i*2]] ?></div></td>
-                                </tr>
-                            <?php endif; ?>
-                        <?php endfor; ?>
-                    </table>
+            <div>
+                <div class="hikaku">
+                    <span style="display: inline-block; width: 120px; margin-left: 15px;"><?= $row['product_name'] ?></span><br>
+                    <img src="./img/product_image/<?= $row['product_id'] ?>.png" class="compare_product_img">
                 </div>
-                
-              
-                
+                <table border="1" class="compare_table" style="display: inline-block;">
+                    <?php for($i=0;$i<7;$i++):                    
+                        if($row[$range_array_key[$i*2]]!="none" && $detail_result[0][$range_array_key[$i*2]]!="none"): ?>
+                            <tr>
+                                <td><div style="display: inline-block; margin-top: 13px; font-size: 0.7em;"><?= $range_array_key[$i*2] ?></div></td>
+                                <td>
+                                    <input type="range" max="<?= $max_obj[0][$range_array_key[$i*2]] ?>" min="0" value="<?= $detail_result[0][$range_array_key[$i*2]] ?>" id="detail_pd" class="detail_pd"/>
+                                    <br>
+                                    <input type="range" max="<?= $max_obj[0][$range_array_key[$i*2]] ?>" min="0" value="<?= $row[$range_array_key[$i*2]] ?>" id="compare_pd" class="compare_pd"/>
+                                </td>
+                                <td style="width: 40px;"><div><?= $detail_result[0][$range_array_key[$i*2]] ?></div><div><?= $row[$range_array_key[$i*2]] ?></div></td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                </table>
+            </div> 
             <?php else: ?>
                 <div style="padding-bottom: 5%;">
                     <h3 style="text-align: center;"><?= $row['product_name'] ?>は同じカテゴリーの製品ではありません。</h3>
@@ -134,8 +126,6 @@ $detail_result = $sql->fetchAll();
                 <div style="margin-left: 13%; width: 85%;"><?= $row['review_contents'] ?></div>
             </div>
         </div>
-        
-        
         <?php endforeach; ?>
     </div>
 </form> 
