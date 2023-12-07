@@ -51,7 +51,7 @@
     
   </form>
     
-    <form action="mypage.php" method="post" class="logoutform">
+    <form action="mypage.php" method="post" id="logoutform">
     <p><input id="logoutbutton" type="button" class="button is-danger" value="ログアウト"></p>
     </form>
 
