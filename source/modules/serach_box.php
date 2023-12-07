@@ -1,7 +1,7 @@
 
 <div class="search_block">
     <form action="shouhinichiran.php" method="get" class="serch_form">
-        <input type="text" name="product_name" class="search_box">
+        <input type="text" id="search_keyword" name="product_name" class="search_box">
         <button type="submit" class="search_btn"><i class="fa fa-search fa-lg"></i></button>
         <button type="button" id="voice_search"><i class="fa solid fa-microphone"></i></button>
     </form>
@@ -36,7 +36,7 @@ recognition.onend = function(){
 recognition.onresult = (event) => {
     var data = event.results[0][0].transcript;
     console.log("音声入力結果出力"+data);
-    document.getElementByName("product_name").value=""+data;
+    document.getElementById("search_keyword").value=""+data;
 }
 }
 </script>
