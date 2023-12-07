@@ -51,5 +51,29 @@
     
   </form>
     
+    <form action="mypage.php" method="post" class="logoutform">
+    <p><input id="logoutbutton" type="button" class="button is-danger" value="ログアウト"></p>
+    </form>
+
+    <script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
+    <script>
+      $(function(){
+        $('#logoutbutton').on('click',function(){
+          $.ajax({
+            type: "POST",
+            url: "logout.php",
+            data: {},
+            dataType: "text"
+          }).done(function(data){
+            if(data=="success"){
+              $('#logoutform').submit();
+            }else if(data=="fail"){
+
+            }
+          });
+        });
+      });
+    </script>
+    
 <?php require 'modules/navigation.php'; ?> 
 <?php require 'modules/footer.php'; ?>
