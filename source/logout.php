@@ -1,11 +1,11 @@
-<?php require 'modules/utilcommon.php'; ?>
+<?php session_start(); ?>
 <?php
-session_start();
 if(isset($_SESSION['user'])){
     unset($_SESSION['user']);
-    redirect('login.php');
-    echo 'success';
+    $msg = "success";
+    echo json_encode(["msg" => [$msg]]);
 }else{
-    echo 'fail';
+    $msg = "fail";
+    echo json_encode(["msg"=>[$msg]]);
 }
 ?>
