@@ -1,5 +1,13 @@
+<?php session_start(); ?>
 <?php require 'modules/header.php'; ?>
 <?php require 'modules/serach_box.php'; ?>
+
+<?php
+if(!isset($_SESSION['user'])){   
+    redirect("login.php");
+}
+?>
+
 <div id="app" class="centered_input_wide">
 <span v-if="check_item">
     <p>小計 ￥{{price}}</p>
