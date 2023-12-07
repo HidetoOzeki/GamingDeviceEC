@@ -22,7 +22,7 @@ $sql = $pdo->prepare('select product.product_name, product.category_id, price, i
 $sql->execute([$_GET['detail_pd'],$_GET['detail_pd']]);
 $detail_result = $sql->fetchAll();
 ?>
-<form action="kaimonokago.php">
+<form>
     <div class="shohin">
         <img src="./img/product_image/<?= $_GET['detail_pd'] ?>.png" class="product_detail_img">
     </div>
@@ -31,7 +31,7 @@ $detail_result = $sql->fetchAll();
         <star-rating :increment="0.1" :rating="<?= $detail_result[0]["avg_review_rate"] ?>" :max-rating="3" :read-only="true" :star-size="30"></star-rating>
         <span style="font-size: 1.5em" class="detail-prices">￥<?= $detail_result[0]["price"] ?></span>
     </div>
-    <div class="cart_btn" align="right" style="margin: 3%"><input type="hidden" id="insert_product" value="<?= $_GET['detail_pd'] ?>"><button id="cart_insert" type="submit">カートに追加</button></div>
+    <div class="cart_btn" align="right" style="margin: 3%"><input type="hidden" id="insert_product" value="<?= $_GET['detail_pd'] ?>"><button id="cart_insert" type="button">カートに追加</button></div>
     <style>
    h1{
         text-align: center;
@@ -83,7 +83,7 @@ $detail_result = $sql->fetchAll();
         foreach($compare_result as $row):
             if($row['category_id']==$detail_result[0]["category_id"]):
         ?>
-            <div>
+            <div style="margin-bottom: 6%;">
                 <div class="hikaku">
                     <span style="display: inline-block; width: 120px; margin-left: 15px;"><?= $row['product_name'] ?></span><br>
                     <img src="./img/product_image/<?= $row['product_id'] ?>.png" class="compare_product_img">
