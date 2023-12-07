@@ -1,7 +1,7 @@
 <?php
- const SERVER = '127.0.0.1';
- const DBNAME = 'gamingdeviceec';
- const USER = 'root';
- const PASS = '';
- $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+    const SERVER = 'mysql218.phy.lolipop.lan';
+    const DBNAME = 'LAA1517426-gamingdeviec';
+    const USER = 'LAA1517426';
+    const PASS = 'Pass0919';
+    $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
 ?>

@@ -4,13 +4,6 @@
 <?php require 'modules/utilcommon.php'; ?>
 
 
-<?php
-  
-  if(!isset($_SESSION['user'])){
-    
-     redirect("login.php");
-}
-?>
     <style>
         p{
           text-align:center;
@@ -52,7 +45,7 @@
   </form>
     
     <form action="mypage.php" method="post" id="logoutform">
-    <p><input id="logoutbutton" type="submit" class="button is-danger" value="ログアウト"></p>
+    <p><input id="logoutbutton" type="button" class="button is-danger" value="ログアウト"></p>
     </form>
 
     <script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
@@ -65,9 +58,10 @@
             data: {},
             dataType: "text"
           }).done(function(data){
-            if(data=="success"){
-              $('#logoutform').submit();
-            }else if(data=="fail"){
+            let result = JSON.parse(data);
+            if(result.msg[0]=="success"){
+              location.href="login.php";
+            }else if(result.msg[0]=="fail"){
 
             }
           });
