@@ -1,4 +1,12 @@
-<script type="text/javascript">
+
+<div class="search_block">
+    <form action="shouhinichiran.php" method="get" class="serch_form">
+        <input type="text" name="product_name" class="search_box">
+        <button type="submit" class="search_btn"><i class="fa fa-search fa-lg"></i></button>
+        <button type="button" id="voice_search"><i class="fa solid fa-microphone"></i></button>
+    </form>
+</div>
+<script>
 
 var recognizing = false;
 
@@ -27,17 +35,9 @@ recognition.onend = function(){
 
 recognition.onresult = (event) => {
     var data = event.results[0][0].transcript;
-    console.log("音声入力結果出力"+text);
+    console.log("音声入力結果出力"+data);
     document.getElementByName("product_name").innerText=data;
 }
 }
-
 </script>
-<div class="search_block">
-    <form action="shouhinichiran.php" method="get" class="serch_form">
-        <input type="text" name="product_name" class="search_box">
-        <button type="submit" class="search_btn"><i class="fa fa-search fa-lg"></i></button>
-        <button type="button" id="voice_search"><i class="fa solid fa-microphone"></i></input>
-    </form>
-</div>
 <div class="indent"></div>
