@@ -30,6 +30,7 @@ recognition.onresult = (event) => {
     console.log("音声入力結果出力"+text);
     document.getElementByName("product_name").innerText=data;
 }
+}
 
 </script>
 <div class="search_block">
