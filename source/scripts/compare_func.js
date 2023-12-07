@@ -9,9 +9,11 @@ $(function(){
             url: "session_check.php",
           }).done(function(data){
             let done = JSON.parse(data);
-            if(done.msg[0]=="yet_login"){
-              location.href="login.php";
-            }
+            $(document).ajaxStop(function() {
+              if(done.msg[0]=="yet_login"){
+                location.href="login.php";
+              }
+            });
           });
           $(e.target).parent().parent().parent().children().remove("#hidden");
           //let num = $(e.target).parent().parent().find("#detail_pd").val();
@@ -29,9 +31,11 @@ $(function(){
             url: "session_check.php",
           }).done(function(data){
             let done = JSON.parse(data);
-            if(done.msg[0]=="yet_login"){
-              location.href="login.php";
-            }
+            $(document).ajaxStop(function() {
+              if(done.msg[0]=="yet_login"){
+                location.href="login.php";
+              }
+            });
           });
         }
         
