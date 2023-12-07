@@ -52,7 +52,7 @@
   </form>
     
     <form action="mypage.php" method="post" id="logoutform">
-    <p><input id="logoutbutton" type="button" class="button is-danger" value="ログアウト"></p>
+    <p><input id="logoutbutton" type="submit" class="button is-danger" value="ログアウト"></p>
     </form>
 
     <script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
