@@ -1,30 +1,31 @@
 <script type="text/javascript">
 
-    const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recognizer = new Recognition();
+var recognizing = false;
 
-    recognizer.lang = 'ja-JP';
+if(!('webkitSpeechRecognition' in window)){
+    console.log("SpeechRecognition is not supported on your browser!");
+}else{
+var recognition = new webkitSpeechRecognition();
 
-    var listening = false;
+var out = document.getElementById('output');
 
-    function startRecog(){
-        listening = !listening;
+//recognition.continuous = true;
 
-        if(!listening){
-        recognizer.start();
-        console.log("音声入力待機中");
-        }else{
-        recognizer.stop();
-        console.log("音声入力停止");
-        }
-    }
+recognition.onstart = function(){
+    recognizing = true;
+    console.log('recognition started');
+}
+recognition.onend = function(){
+    recognizing = false;
+    console.log('recognition ended');
+}
 
-    recognizer.onresult = (event) => {
-        const text = event.result[0][0].transcript;
-        console.log("音声入力結果出力"+text);
-        document.getElementByName("product_name").innerText=text;
-        listening = false;
-    }
+
+recognition.onresult = (event) => {
+    var data = event.results[0][0].transcript;
+    console.log("音声入力結果出力"+text);
+    document.getElementByName("product_name").innerText=data;
+}
 
 </script>
 <div class="search_block">
