@@ -36,7 +36,7 @@ recognition.onend = function(){
 recognition.onresult = (event) => {
     var data = event.results[0][0].transcript;
     console.log("音声入力結果出力"+data);
-    document.getElementByName("product_name").innerText=data;
+    document.getElementByName("product_name").value=""+data;
 }
 }
 </script>
