@@ -11,7 +11,7 @@
  </style>
 <form>
  <p><button type="submit" class="b button is-link" id="register_btn">保存</button></p>
-</form>
+
  <br>
 
  <?php
@@ -29,6 +29,7 @@
  <p>住所</p>
     <input placeholder="郵便番号を入力しEnterキーを押してください" v-bind="zipcode" type="address" id="user_address" value=<?=$user_address?>>
    </div>
+</form>
 </div>
 <script src="./modules/モジュール用SCRIPT/jquery-3.7.0.min.js"></script>
 <script src="./scripts/user_profile_update.js"></script>

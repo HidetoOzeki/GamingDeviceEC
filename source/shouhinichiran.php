@@ -6,7 +6,7 @@
         if(isset($_GET['product_name'])){
             $search_product = "%".$_GET['product_name']."%";
             $sql = $pdo->prepare('select * from product where (product_name LIKE ? or category_id = (SELECT category_id from category WHERE category_name = ?) or bland_id = (SELECT bland_id from bland WHERE bland_name = ?))');
-            $sql->execute([[$search_product],$_GET['product_name'],$_GET['product_name']]);
+            $sql->execute([$search_product,$_GET['product_name'],$_GET['product_name']]);
         }else if(isset($_GET['purpose']) || isset($_GET['bland']) || isset($_GET['price'])):
             $verify = [];
             if(isset($_GET['purpose'])){

@@ -6,7 +6,7 @@
 <div class="centered_input_wide">
 <form>
     <p>お名前:<?= $_SESSION['user']["user_name"] ?></p>
-    <p>配送先:<?php if(!is_null($_SESSION['user']["user_address"])){
+    <p>配送先:<?php if((!is_null($_SESSION['user']["user_address"])) && (!empty($_SESSION['user']["user_address"]))){
                         echo $_SESSION['user']["user_address"];
                     }else {
                         echo '-----------';
