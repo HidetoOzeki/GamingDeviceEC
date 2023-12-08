@@ -1,4 +1,10 @@
 <?php session_start(); ?>
+<?php
+if(!isset($_SESSION['user'])){
+    header("location: login.php");
+    exit();
+}
+?>
 <?php require 'modules/db.php'; ?>
 <?php require 'modules/header.php'; ?>
 <?php require 'modules/utilcommon.php'; ?>

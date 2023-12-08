@@ -1,10 +1,16 @@
+<?php session_start(); ?>
+<?php
+if(!isset($_SESSION['user'])){
+    header("location: login.php");
+    exit();
+}
+?>
 <?php require 'modules/db.php'; ?>
 <?php require 'modules/header.php'; ?>
 <?php require 'modules/serach_box.php'; ?>
 <?php
 $pdo = new PDO($connect,USER,PASS);
 $sql = $pdo->query('select * from bland');
-$count = 1;
 ?>
     <h3>使用用途</h3><br>
     <div class="category_div">
@@ -14,9 +20,9 @@ $count = 1;
             <label><input type="radio" name="purpose" value="P" class="none"><i class="fas fa-gamepad fa-5x"></i></label>
             <p>デバイスブランド</p>
             <?php foreach($sql as $row): ?>
-                <label class="bland_label"><input type="radio" name="bland" value="00000<?= $count ?>" class="none"><img src="./img/<?= $row['bland_id'] ?>.png" class="bland-image"></label>
+                <label class="bland_label"><input type="radio" name="bland" value="<?= $row['bland_id'] ?>" class="none"><img src="./img/<?= $row['bland_id'] ?>.png" class="bland-image"></label>
             <?php
-            $count++;
+            
             endforeach;
             ?>
             <p>カテゴリから選ぶ</p>
