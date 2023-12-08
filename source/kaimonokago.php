@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php require 'modules/header.php'; ?>
 <?php require 'modules/serach_box.php'; ?>
+<?php require 'modules/utilcommon.php'; ?>
 
 <?php
 if(!isset($_SESSION['user'])){   
