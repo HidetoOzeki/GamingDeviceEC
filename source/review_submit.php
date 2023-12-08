@@ -24,8 +24,8 @@ if(empty($sql->fetchAll())){
     exit;
 }else{
     //レビュー更新
-    $sql = $pdo->prepare('update review set post_date = CURRENT_DATE, review_rate = ? , review_contents = ? where user_id = ?');
-    $sql->execute([$rating,$review_content,$user_id]);
+    $sql = $pdo->prepare('update review set post_date = CURRENT_DATE, review_rate = ? , review_contents = ? where user_id = ? and product_id = ?');
+    $sql->execute([$rating,$review_content,$user_id,$product_id]);
     echo 'done';
     exit;
 }
