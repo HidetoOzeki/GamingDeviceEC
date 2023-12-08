@@ -1,13 +1,12 @@
 <?php session_start(); ?>
-<?php require 'modules/header.php'; ?>
-<?php require 'modules/serach_box.php'; ?>
-<?php require 'modules/utilcommon.php'; ?>
-
 <?php
-if(!isset($_SESSION['user'])){   
-    redirect("login.php");
+if(!isset($_SESSION['user'])){
+    header("location: login.php");
+    exit();
 }
 ?>
+<?php require 'modules/header.php'; ?>
+<?php require 'modules/serach_box.php'; ?>
 
 <div id="app" class="centered_input_wide">
 <span v-if="check_item">
