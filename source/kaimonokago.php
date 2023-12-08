@@ -19,7 +19,7 @@ if(!isset($_SESSION['user'])){
         <p>{{item.cart_date}}</p>
         <form><button @click="delete_btn(item.product_id,i)" class="button_de" type="button">削除</button></form>
         <div class="stepper-app">
-            <button class="decrease_btn" @click="decrease(i)">-</button><div class="count"><p>{{ amounts[i] }}</div><button @click="increase(i)" class="increase_btn">+</button>
+            <button class="decrease_btn" @click="decrease(i)">-</button><div class="count"><input type="number" v-model="amounts[i]" readonly"></div><button @click="increase(i)" class="increase_btn">+</button>
         </div>
     </div>
 </span>
