@@ -2,6 +2,6 @@
 <?php require 'modules/db.php'?>
 <?php
     $pdo = new PDO($connect,USER,PASS);
-    $sql = $pdo->prepare('insert into cart values(?,?,CURRENT_DATE());');
+    $sql = $pdo->prepare('insert into cart values(?,?,CURRENT_DATE(),1);');
     $sql->execute([$_SESSION['user']["user_id"],$_POST['insert_product']]);
 exit;

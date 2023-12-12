@@ -9,14 +9,14 @@ const app = new Vue({
         };
     },
     methods: {
-        decrease(value){    
+        decrease(value,id){    
             if(this.amounts[value]>1){
                 this.amounts[value]--;
                 this.amounts.splice();
                 this.price -= this.items[value].price;
             }
         },
-        increase(value){
+        increase(value,id){
             this.amounts[value]++;
             this.amounts.splice();
             this.price += this.items[value].price;   
@@ -50,9 +50,19 @@ const app = new Vue({
             }else {
                 self.check_items = false;
             }
-            
         }).catch(function(error){
             alert(error);
         });
+    },
+    beforeDestroy(){
+        /*let amount_array = [];
+        const change_param = new FormData()
+        change_param.append("amounts",this.amounts);
+        change_param.append("items",amount_array);
+        for(var i = 0;i<this.items.length;i++){
+            amount_array.push(this.items[i].amounts);
+        }*/
+        console.log("success");
+        //axios.post("./amounts_change.php",change_param).then(function(response){});
     }
 });
