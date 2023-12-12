@@ -1,7 +1,7 @@
 
 <div class="search_block">
     <form action="shouhinichiran.php" method="get" class="serch_form">
-        <input type="text" id="search_keyword" name="product_name" class="search_box">
+        <input type="text" id="search_keyword" placeholder="商品名・ブランド・カテゴリを入力してください" name="product_name" class="search_box">
         <button type="submit" class="search_btn"><i class="fa fa-search fa-lg"></i></button>
         <button type="button" id="voice_search"><i class="fa solid fa-microphone"></i></button>
     </form>
