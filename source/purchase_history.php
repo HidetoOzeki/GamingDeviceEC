@@ -17,20 +17,23 @@
     $id = $_SESSION['user']['user_id'];
 
     $pdo = new PDO($connect,USER,PASS);
-    $sql = $pdo->prepare('select purchase_id from purchase where user_id=?');
+    $sql = $pdo->prepare('select * from purchase where user_id=?');
     $sql->execute([$id]);
+    $count = 0;
     foreach($sql as $purchase){
         $purchase_id = $purchase['purchase_id'];
         $sql = $pdo->prepare('select * from purchase_details where purchase_id = ?');
         $sql->execute([$purchase_id]);
+        echo '<p>ご購入日 : ' , $purchase['purchase_date'] , '<p>';
         foreach($sql as $product){
             $sql = $pdo->prepare('select * from product where product_id = ?');
             $sql->execute([$product['product_id']]);
             foreach($sql as $item){
+                $count++;
                 echo '
-                <form action="shohin-detail.php" method="GET" id="jump_to_detail">
-                <div class="purchased_item" id="purchased_item_area">
-                <input type="hidden" name="detail_pd" value="',$item['product_id'],'" id="detail_pd">
+                <form action="shohin-detail.php" method="GET" id="detail_form',$count,'">
+                <div class="purchased_item" onClick="document.forms[\'detail_form',$count,'\'].submit();">
+                <input type="hidden" name="detail_pd" value="',$item['product_id'],'">
                 <img class="purchased_item_img" src="img/product_image/', $item['product_id'] ,'.png" alt="">
                 </form>
                 <div class="purchased_item_description">
