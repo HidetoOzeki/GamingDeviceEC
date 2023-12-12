@@ -44,7 +44,7 @@ const app = new Vue({
             self.items = response.data
             if(self.items!="レコードが有りません"){
                 for(var i = 0;i<self.items.length;i++){
-                    self.amounts.push(1);
+                    self.amounts.push(self.items[i].amounts);
                     self.price += self.items[i].price;
                 }
             }else {
