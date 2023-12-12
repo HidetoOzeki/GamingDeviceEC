@@ -26,7 +26,7 @@ $sql = $pdo->query('select * from bland');
             endforeach;
             ?>
             <p>カテゴリから選ぶ</p>
-            <span class="category_span"><a v-for="(item,j) in category" :category_key="j" :href="`categoribetu.php?category_pd=00000${j+1}`" class="categories"><i :class="item"></i></a></span>
+            <span class="category_span" v-for="(item,j) in category" :category_key="j"><label><input type="radio" :value="`00000${j+1}`" name="category_id" class="none"><i :class="item"></i></label></span>
             <p>価格</p>
             <div class="wrap">
                 <div v-for="(price,s) in pricerange" :price_key="s">

@@ -236,30 +236,15 @@ body {
     /*margin-left: 7%;*/
 }
 /*ステッパーのボタン設定*/
-.decrease_btn{
-    position: absolute;
-    border-radius: 8px 0 0 8px;
-    left: 0%;
-    top: 1px;
-    height: 23.5px;
-}
 .count{
     position: absolute;
     width: 13%;
     left: 18.5px;
 }
-.increase_btn{
-    position: absolute;
-    border-radius: 0 8px 8px 0;    
-    left: 17%;
-    top: 1px;
-    height: 23.5px;
-}
+
 .button_de{
     margin-top: 10px;
 }
-
-
 
 .detail_pd {
     appearance: none;

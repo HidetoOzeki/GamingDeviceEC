@@ -7,7 +7,43 @@ if(!isset($_SESSION['user'])){
 ?>
 <?php require 'modules/header.php'; ?>
 <?php require 'modules/serach_box.php'; ?>
-
+<style>
+    /* iOSでのデフォルトスタイルをリセット */
+    input[type="submit"],
+    input[type="button"] {
+    border-radius: 0;
+    -webkit-box-sizing: content-box;
+    -webkit-appearance: button;
+    appearance: button;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    }
+    input[type="submit"]::-webkit-search-decoration,
+    input[type="button"]::-webkit-search-decoration {
+    display: none;
+    }
+    input[type="submit"]::focus,
+    input[type="button"]::focus {
+    outline-offset: -2px;
+    }
+    .increase_btn{
+    position: absolute;
+    border-radius: 0 8px 8px 0;    
+    left: 16%;
+    top: 4.8px;
+    height: 19.7px;
+    z-index: 500;
+    }
+    .decrease_btn{
+    position: absolute;
+    border-radius: 8px 0 0 8px;
+    left: -1.3%;
+    top: 4.8px;
+    height: 19.7px;
+    z-index: 500;
+    }
+</style>
 <div id="app" class="centered_input_wide">
 <span v-if="check_item">
     <p>小計 ￥{{price}}</p>

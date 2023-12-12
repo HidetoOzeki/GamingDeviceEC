@@ -46,7 +46,7 @@
         <tr><th class='control_item_desc'>レビュー</th><th></th></tr>
         <?php
             foreach($pdo->query('select * from review') as $row){
-                echo '<tr><td  class="control_item_desc">',$row['review_contents'],'</td><td><form action="delete.php" ><button type="submit">削除</button></form></td></tr>';
+                echo '<tr><td  class="control_item_desc">',$row['review_contents'],'</td><td><form action="delete.php" method="post"><input type="hidden" name="review_user_inform" value="',$row['user_id'],'"><input type="hidden" name="review_product_inform" value="',$row['product_id'],'"><button type="submit">削除</button></form></td></tr>';
             }
             ?>
     </table>

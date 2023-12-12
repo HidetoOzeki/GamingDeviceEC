@@ -7,7 +7,7 @@
             $search_product = "%".$_GET['product_name']."%";
             $sql = $pdo->prepare('select * from product where (product_name LIKE ? or category_id = (SELECT category_id from category WHERE category_name = ?) or bland_id = (SELECT bland_id from bland WHERE bland_name = ?))');
             $sql->execute([$search_product,$_GET['product_name'],$_GET['product_name']]);
-        }else if(isset($_GET['purpose']) || isset($_GET['bland']) || isset($_GET['price'])):
+        }else if(isset($_GET['purpose']) || isset($_GET['bland']) || isset($_GET['price']) || isset($_GET['category_id'])):
             $verify = [];
             if(isset($_GET['purpose'])){
                 $verify[] = "purpose_id = '".$_GET['purpose']."'";
@@ -39,6 +39,9 @@
                         break;
                 }
                 $verify[] = $price_first." <= price and price < ".$price_last;
+            }
+            if(isset($_GET['category_id'])){
+                $verify[] = "category_id = '".$_GET['category_id']."'";
             }
             $msg = implode(" and ",$verify);
             $sql = $pdo->query('select * from product where '.$msg.' and product_delete_flg = "false"');
