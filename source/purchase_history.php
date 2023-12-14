@@ -15,26 +15,19 @@
     }
 
     $id = $_SESSION['user']['user_id'];
-
     $pdo = new PDO($connect,USER,PASS);
     $sql = $pdo->prepare('select * from purchase where user_id=?  order by purchase_date desc');
     $sql->execute([$id]);
     $count = 0;
-    echo '<p>ご購入日 : ' , $sql[0]['purchase_date'] , '<p>';
-    $save_date = $sql[0]['purchase_date'];
-    $save_purchase_id = $sql[0]['purchase_id'];
-    /*foreach($sql as $purchase){
+    foreach($sql as $purchase){
         $purchase_id = $purchase['purchase_id'];
         $sql = $pdo->prepare('select * from purchase_details where purchase_id = ?');
         $sql->execute([$purchase_id]);
         echo '<p>ご購入日 : ' , $purchase['purchase_date'] , '<p>';
         foreach($sql as $product){
             $sql = $pdo->prepare('select * from product where product_id = ?');
-            $sql->execute([$product['product_id']]);*/
+            $sql->execute([$product['product_id']]);
             foreach($sql as $item){
-                if($item["purchase_id"]!=$save_purchase_id){
-                    echo '<p>ご購入日 : ' , $item['purchase_date'] , '<p>';
-                }
                 $count++;
                 echo '
                 <form action="shohin-detail.php" method="GET" id="detail_form',$count,'">
@@ -50,10 +43,9 @@
                 </form>
                 </div>
                 </div>';
-                $save_purchase_id = $item['purchase_id'];
             }
-        //}
-    //}
+        }
+    }
 
     ?>
 </div>
