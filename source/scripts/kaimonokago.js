@@ -1,4 +1,4 @@
-const app = new Vue({
+new Vue({
     el: "#app",
     data(){
         return{
@@ -15,11 +15,19 @@ const app = new Vue({
                 this.amounts.splice();
                 this.price -= this.items[value].price;
             }
+            var amount_inform = new URLSearchParams();
+            amount_inform.append("product_id", id);
+            amount_inform.append("amounts", this.amounts[value]);
+            axios.post("./amounts_change.php",amount_inform).then(function(response){});
         },
         increase(value,id){
             this.amounts[value]++;
             this.amounts.splice();
-            this.price += this.items[value].price;   
+            this.price += this.items[value].price;
+            var amount_inform = new URLSearchParams();
+            amount_inform.append("product_id", id);
+            amount_inform.append("amounts", this.amounts[value]);
+            axios.post("./amounts_change.php",amount_inform).then(function(response){});   
         },
         delete_btn(num,index){
             this.price -= this.items[index].price*this.amounts[index];
@@ -53,16 +61,5 @@ const app = new Vue({
         }).catch(function(error){
             alert(error);
         });
-    },
-    beforeDestroy(){
-        /*let amount_array = [];
-        const change_param = new FormData()
-        change_param.append("amounts",this.amounts);
-        change_param.append("items",amount_array);
-        for(var i = 0;i<this.items.length;i++){
-            amount_array.push(this.items[i].amounts);
-        }*/
-        console.log("success");
-        //axios.post("./amounts_change.php",change_param).then(function(response){});
     }
 });

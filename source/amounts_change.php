@@ -2,10 +2,8 @@
 <?php require 'modules/db.php'; ?>
 <?php
   $pdo = new PDO($connect,USER,PASS);
-  for($i = 0;$i<count($_POST['amounts']);$i++){
-    $sql = $pdo->prepare('update cart set amounts = ? where user_id = ? ');
-    $sql->execute([$_POST['amounts'][$i],$_SESSION['user']["user_id"],$_POST['items'][0]["product_id"]]);
-  }
+  $sql = $pdo->prepare('update cart set amounts = ? where user_id = ? and product_id = ?');
+  $sql->execute([$_POST['amounts'],$_SESSION['user']["user_id"],$_POST['product_id']]);
 
 //値をjson形式で出力
 $data = "成功";

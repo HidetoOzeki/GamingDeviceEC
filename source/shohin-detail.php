@@ -116,17 +116,22 @@ $detail_result = $sql->fetchAll();
         <?php
         $sql = $pdo->prepare('select * from review inner join user on review.user_id=user.user_id where product_id = ? and user_delete_flg="false"');
         $sql->execute([$_GET['detail_pd']]);
-        foreach($sql as $row): ?>
-        <div style="margin-bottom: 4%;">
-            <div style="padding: 2.7% 2% 0% 4%; float:left;"><i class="fas fa-user-circle fa-2x"></i></div>
-            <div>
-                <span><?= $row['user_name'] ?></span><br>
-                <star-rating :increment="0.1" :rating="<?= $row['review_rate'] ?>" :max-rating="3" :read-only="true" :star-size="18" style="display: inline-block;"></star-rating>
-                <span style="margin-left: 44%; font-size: 0.8em;"><?= $row['post_date'] ?></span><br>
-                <div style="margin-left: 13%; width: 85%;"><?= $row['review_contents'] ?></div>
-            </div>
-        </div>
-        <?php endforeach; ?>
+        $fetch_sql = $sql->fetchAll();
+        if(!empty($fetch_sql)):
+            foreach($fetch_sql as $row): ?>
+                <div style="margin-bottom: 4%;">
+                    <div style="padding: 2.7% 2% 0% 4%; float:left;"><i class="fas fa-user-circle fa-2x"></i></div>
+                    <div>
+                        <span><?= $row['user_name'] ?></span><br>
+                        <star-rating :increment="0.1" :rating="<?= $row['review_rate'] ?>" :max-rating="3" :read-only="true" :star-size="18" style="display: inline-block;"></star-rating>
+                        <span style="margin-left: 44%; font-size: 0.8em;"><?= $row['post_date'] ?></span><br>
+                        <div style="margin-left: 13%; width: 85%;"><?= $row['review_contents'] ?></div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <h2 style="text-align: center; font-size: 15px;">レビューがありません。</h2>
+        <?php endif; ?>
     </div>
 </form> 
     <?php require 'modules/navigation.php'; ?>
