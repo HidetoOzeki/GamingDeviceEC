@@ -17,7 +17,7 @@
     $id = $_SESSION['user']['user_id'];
 
     $pdo = new PDO($connect,USER,PASS);
-    $sql = $pdo->prepare('select * from purchase where user_id=?');
+    $sql = $pdo->prepare('select * from purchase where user_id=?  order by purchase_date desc');
     $sql->execute([$id]);
     $count = 0;
     foreach($sql as $purchase){
