@@ -17,10 +17,8 @@
     $id = $_SESSION['user']['user_id'];
 
     $pdo = new PDO($connect,USER,PASS);
-    //$sql = $pdo->prepare('select * from purchase where user_id=?');
-    $history_sql = $pdo->prepare('select DISTINCT product_name, product_id, purchase_id, purchase_date from purchase INNER JOIN purchase_details USING(purchase_id) INNER JOIN product USING(product_id) where user_id=?');
-    $history_sql->execute([$id]);
-    $sql = $history_sql->fetchAll();
+    $sql = $pdo->prepare('select * from purchase where user_id=?  order by purchase_date desc');
+    $sql->execute([$id]);
     $count = 0;
     echo '<p>ご購入日 : ' , $sql[0]['purchase_date'] , '<p>';
     $save_date = $sql[0]['purchase_date'];

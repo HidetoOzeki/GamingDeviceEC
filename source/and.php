@@ -3,44 +3,42 @@
     
 <div id="app" class="centered_input_wide">
     <form action="toroku.php" method="post">
-        <p>カテゴリーID</p>
-        <input placeholder="" type="number" @input="category_check" v-model="category_id" name="add_product[]" min="1" max="6" required>
-        
-        <p>ブランドID</p>
-        <input placeholder="" type="number" @input="bland_check" v-model="bland_id" name="add_product[]" min="1" max="13" required>
-        
-        <p>仕様用途</p>
-        <input placeholder="" type="text" name="add_product[]" maxlength="1" required>
-        <p>商品名</p>
-        <input placeholder="" type="text" name="add_product[]" value="<?= $_POST['input_name'] ?>" required>
-        <p>値段</p>
-        <input placeholder="" type="text" name="add_product[]" required>
-        <p>インターフェース</p>
-        <input placeholder="" type="text" name="spec_interface" required>
-        <p>スペック解像度</p>
-        <input placeholder="" type="text" name="spec_clearly" required>
-        <p>OS</p>
-        <input placeholder="" type="text" name="spec_os" required>
-        <p>スペックサイズ</p>
-        <input placeholder="" type="text" name="spec_size" required>
-        <p>スペック重さ</p>
-        <input placeholder="" type="text" name="spec_weight" required>
-        <p>色</p>
-        <input placeholder="" type="text" name="spec_color" required>
-        <p>CPU</p>
-        <input placeholder="" type="text" name="performance_cpu">
-        <p>メモリ</p>
-        <input placeholder="" name="performance_memory" type="text">
-        <p>ストレージ</p>
-        <input placeholder="" type="text" name="performance_storage">
-        <p>バッテリー</p>
-        <input placeholder="" type="text" name="performance_battery">
-        <p>パフォーマンスサイズ</p>
-        <input placeholder="" type="text" name="performance_size">
-        <p>パフォーマンス解像度</p>
-        <input placeholder="" type="text" name="performance_clearly">
-        <p>パフォーマンス重さ</p>
-        <input placeholder="" type="text" name="performance_weight">
+    <p>カテゴリーID (必須!)</p>
+    <input placeholder="" type="text" name="add_product[]" required>
+    <p>ブランドID (必須!)</p>
+    <input placeholder="" type="text" name="add_product[]" required>
+    <p>仕様用途 (必須!)</p>
+    <input placeholder="" type="text" name="add_product[]" required>
+    <p>商品名 (必須!)</p>
+    <input placeholder="" type="text" name="add_product[]" value="<?= $_POST['input_name'] ?>" required>
+    <p>値段 (必須!)</p>
+    <input placeholder="" type="text" name="add_product[]" required>
+    <p>インターフェース (必須!)</p>
+    <input placeholder="" type="text" name="spec_interface" required>
+    <p>スペック解像度 (必須!)</p>
+    <input placeholder="" type="text" name="spec_clearly" required>
+    <p>OS (必須!)</p>
+    <input placeholder="" type="text" name="spec_os" required>
+    <p>スペックサイズ (必須!)</p>
+    <input placeholder="" type="text" name="spec_size" required>
+    <p>スペック重さ (必須!)</p>
+    <input placeholder="" type="text" name="spec_weight" required>
+    <p>色 (必須!)</p>
+    <input placeholder="" type="text" name="spec_color" required>
+    <p>CPU (必須!)</p>  
+    <input placeholder="" type="text" name="performance_cpu" required>
+    <p>メモリ (任意)</p>
+    <input placeholder="" name="performance_memory" type="text">
+    <p>ストレージ (任意)</p>
+    <input placeholder="" type="text" name="performance_storage">
+    <p>バッテリー (任意)</p>
+    <input placeholder="" type="text" name="performance_battery">
+    <p>パフォーマンスサイズ (任意)</p>
+    <input placeholder="" type="text" name="performance_size">
+    <p>パフォーマンス解像度 (任意)</p>
+    <input placeholder="" type="text" name="performance_clearly">
+    <p>パフォーマンス重さ (任意)</p>
+    <input placeholder="" type="text" name="performance_weight">
         <br>
         <span v-if="submit_check">
             <button type="submit" class="centered_button button is-info is-outlined is-rounded" id="mypage_transition" disabled>商品登録<i class="far fa-hand-point-right"></i></button>    
